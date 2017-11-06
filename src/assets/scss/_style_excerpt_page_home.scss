@@ -1,0 +1,164 @@
+//
+//
+// section slideshow
+
+@include breakpoint(small only) {
+
+  .bg-white{
+    background-color: $white;
+  }
+  .bg-azul{
+    background-color: $azul;
+  }
+  .bg-azulcielo{
+    background-color: $azul-cielo;
+  }
+  .btn-cotizador{
+    @include button-style($white, $white, $black);
+    //@extend .btn-image;
+    //@extend .custom-align;
+    //background-image: url("assets/img/ico-cotizador.png");
+    //background-repeat: no-repeat;
+    //background-position: left center;
+    //height: 40px;
+  }
+  .btn-manejo{
+    @include button-style($azul, $azul, $white);
+    //@extend .btn-image;
+  }
+  .btn-promociones{
+    @include button-style($azul-cielo, $azul-cielo, $white);
+    //@extend .btn-image;
+    //@extend .custom-align;
+  }
+
+  .text-btn{
+    text-align: left;
+    line-height: rem-calc(10);
+    .texto, .imag{
+      position: relative;
+      //display: inline-block;
+      float: left;
+      &:after{
+        clear: both;
+      }
+    }
+    .texto{
+      width: rem-calc(50);
+      font-size: rem-calc(10);
+      padding-top: rem-calc(2);
+    }
+    .imag{
+      width: rem-calc(15);
+      margin-right: rem-calc(5);
+    }
+    img{
+      vertical-align: middle;
+      //margin:  rem-calc(5);
+      width: 100%;
+      max-width: unset;
+      position: relative;
+
+    }
+  }
+
+
+} // end small
+
+//
+//
+// section model - atributos
+
+//.home-bgsection02{
+//  .fp-tableCell{
+//    vertical-align: bottom;
+//  }
+//}
+
+// atributos de cada modelo
+.coches-slider{
+
+  ul{
+    width: 90%;
+  }
+
+  .menu.icon-top > li > div{
+    display: block;
+    line-height: 9px;
+    padding: 0 12px;
+    text-align: center;
+  }
+  .menu.icon-top > li > div img{
+    display: block;
+    margin: 0 auto;
+    max-width: 40px;
+    min-width: 28px;
+  }
+  .menu.icon-top{
+    li{
+      width: 33.3333%;
+      border-right: solid $black 1px;
+      &:last-child{
+        border-right: none;
+      }
+    }
+    span{
+      font-size: rem-calc(9);
+      font-family: "HyundaiSansHead-Regular";
+      @include breakpoint (medium){
+        font-size: rem-calc(10);
+      }
+    }
+  }
+}
+
+// estado activo de cada modelo
+.coches-slider{
+  .center{
+    .item-modelos{
+      /*-webkit-filter: blur(0px);
+              filter: blur(0px);*/
+      -ms-transform: scale(1) !important;
+      -webkit-transform: scale(1) !important;
+      transform: scale(1) !important;
+      h2, p, a, .menu-centered{
+        opacity:1 !important;
+        transition: all .5s ease 0s;
+      }
+      transition: all 1s ease 0s;
+      h1{
+        //margin-top: 50px !important;
+      }
+      a{
+        //margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+@include breakpoint(large) {
+
+  .bg-b{
+    .nav{
+      .owl-prev, .owl-next{
+        position: absolute;
+        top: rem-calc(-330);
+        cursor: pointer;
+      }
+    }
+  }
+
+} // end large
+
+//
+//
+//  section - noticias
+
+.home-bgsection03{
+  .slide{
+    .fp-tableCell{
+      vertical-align: baseline;
+    }
+  }
+
+}

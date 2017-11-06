@@ -1,0 +1,424 @@
+<hyu-page-submenu-plugin></hyu-page-submenu-plugin>
+
+<div id="hyundai-content">
+  <!--Section 1: Select & data form of model and version-->
+  <div class="section meet-bgsection01 meet-section">
+
+    <div class="small-11 small-centered text-center no-padding columns">
+      <h2>Selecciona tu versión <br><small>y solicita tu cotización</small></h2>
+    </div>
+
+    <!--Step 1: Model -->
+    <hyu-fullpage-slide-plugin *ngIf="step === 0">
+      <hyu-models-preview-section
+        [section]="homepage?.screenplay[1]"
+        [selectionEnabled]="true"
+        [showall]="false">
+      </hyu-models-preview-section>
+    </hyu-fullpage-slide-plugin>
+
+    <!--Step 2: Version-->
+    <hyu-fullpage-slide-plugin *ngIf="step === 1">
+      <div class="model-version">
+        <div class="row expanded">
+          <div class="small-12 text-center columns">
+            <h4>Selecciona una <strong>versión</strong></h4>
+          </div>
+          <div class="small-12 medium-12 large-6 no-padding no-margin columns separator" >
+            <div class="row">
+              <div class="small-12 medium-12 large-8 no-padding columns">
+                <!--mobile version-->
+                <div class="show-for-small show-for-portrait">
+                  <ul class="accordion accordion-mobile" data-accordion data-allow-all-closed="true" >
+                    <li class="accordion-item" data-accordion-item *ngFor="let version of versions" [class.is-active]="currentVersion === version" [hidden]="clicked == 1 && currentVersion != version">
+                      <a (click)="OnVersionClicked(version)" class="accordion-title">
+                        <div class="container-text">
+                          <h1>{{version.title}} <small>{{version.caption_text}}</small></h1>
+                        </div>
+                        <div class="container-img">
+                          <img [src]="version.landscape_src">
+                        </div>
+                      </a>
+                      <div class="accordion-content" data-tab-content>
+                        <div class="meet-li-version" [innerHTML]="currentVersion?.children[0].content_text"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- desktop version-->
+                <div class="container-version versions" *ngFor="let version of versions">
+                  <div class="show-for-large">
+                    <a (click)="OnVersionClicked(version)" [class.active]="version === currentVersion">
+                      <div class="container-text">
+                        <h1>{{version.title}} <small>{{version.caption_text}}</small></h1>
+                      </div>
+                      <div class="container-img">
+                        <img [src]="version.landscape_src">
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="small-12 medium-6 columns show-for-large">
+            <div class="meet-li-version" [innerHTML]="currentVersion?.children[0].content_text"></div>
+          </div>
+          <div class="small-12 nav-buttons text-center columns">
+            <a class="button" [routerLink]="['../']">
+              Regresar
+            </a>
+            <a class="button" (click)="OnVersionSelected()">
+              Selecciona
+            </a>
+          </div>
+        </div>
+      </div>
+    </hyu-fullpage-slide-plugin>
+
+    <!--Step 3: Interior/Exterior -->
+    <hyu-fullpage-slide-plugin *ngIf="step === 2">
+      <div class="model-settings">
+        <!--mobile version-->
+        <div class="row show-for-small-only">
+          <div hyu-owl-plugin [owlresponsive]="itemshow" [owlloop]="false">
+            <div class="item">
+              <div class="row">
+                <div class="small-12 text-center columns">
+                  <h1>{{currentVersion?.title}} <small>{{currentVersion.caption_text}}</small></h1>
+                </div>
+                <div class="small-12 columns">
+                  <p class="text-center">Selecciona color <strong>exterior</strong></p>
+                  <div class="row">
+                    <!--<div class="small-12 meet-img-preview columns">
+                      <img [src]="currentVersionExteriorColor.frames_src[0]" alt="">
+                    </div>-->
+                  </div>
+                  <div class="row">
+                    <div class="small-12 columns">
+                      <!-- Color name-->
+                      <div class="menu-centered">
+                        <ul class="menu">
+                          <li *ngFor="let color of currentVersionExteriorColors"
+                              [class.active]="color === currentVersionExteriorColor">
+                            <a (click)="VersionExteriorColorSelected(color)">
+                              <h6>{{color?.color_name}}</h6>
+                              <div class="color"
+                                   [style.background]="color?.color_hex">
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="small-12 columns">
+                <p class="text-center">Selecciona color <strong>interior</strong></p>
+                <div class="row">
+                  <!--<div class="small-12 meet-img-preview columns">
+                    <img [src]="currentVersionInteriorColor.frames_src[0]" alt="">
+                  </div>-->
+                </div>
+                <div class="row">
+                  <div class="small-12 columns">
+                    <!-- Color name-->
+                    <div class="menu-centered">
+                      <ul class="menu">
+                        <li *ngFor="let color of currentVersionInteriorColors"
+                            [class.active]="color === currentVersionInteriorColor">
+                          <a (click)="VersionInteriorColorSelected(color)">
+                            <h6>{{color?.color_name}}</h6>
+                            <div class="color"
+                                 [style.background]="color?.color_hex">
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="small-12 nav-buttons text-center columns">
+            <a class="button" [routerLink]="['../']">
+              Regresar
+            </a>
+            <a class="button" (click)="MoveTo4()">
+              Selecciona
+            </a>
+          </div>
+        </div>
+        <!-- desktop version-->
+        <div class="row expanded show-for-medium">
+          <div class="small-12 text-center columns">
+            <h1>{{currentVersion?.title}} <small>{{currentVersion.caption_text}}</small></h1>
+          </div>
+          <!-- selecion exterior-->
+          <div class="medium-12 large-6 columns separator">
+            <p class="text-center">Selecciona color <strong>exterior</strong></p>
+            <div class="row">
+              <!--<div class="small-12 meet-img-preview columns">
+                <img [src]="currentVersionExteriorColor.frames_src[0]" alt="">
+              </div>-->
+            </div>
+            <div class="row">
+              <div class="small-12 columns">
+                <!-- Color name-->
+                <div class="menu-centered">
+                  <ul class="menu">
+                    <li *ngFor="let color of currentVersionExteriorColors"
+                        [class.active]="color === currentVersionExteriorColor">
+                      <a (click)="VersionExteriorColorSelected(color)">
+                        <h6>{{color?.color_name}}</h6>
+                        <div class="color"
+                             [style.background]="color?.color_hex">
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- seleccion interior -->
+          <div class="medium-12 large-6 columns">
+            <p class="text-center">Selecciona color <strong>interior</strong></p>
+            <div class="row">
+              <!--<div class="small-12 meet-img-preview columns">
+                <img [src]="currentVersionInteriorColor.frames_src[0]" alt="">
+              </div>-->
+            </div>
+            <div class="row">
+              <div class="small-12 columns">
+                <!-- Color name-->
+                <div class="menu-centered">
+                  <ul class="menu">
+                    <li *ngFor="let color of currentVersionInteriorColors"
+                        [class.active]="color === currentVersionInteriorColor">
+                      <a (click)="VersionInteriorColorSelected(color)">
+                        <h6>{{color?.color_name}}</h6>
+                        <div class="color"
+                             [style.background]="color?.color_hex">
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="small-12 nav-buttons text-center columns">
+            <a class="button" [routerLink]="['../']">
+              Regresar
+            </a>
+            <a class="button" (click)="MoveTo4()">
+              Selecciona
+            </a>
+          </div>
+        </div>
+      </div>
+    </hyu-fullpage-slide-plugin>
+
+    <hyu-fullpage-slide-plugin *ngIf="step === 3">
+      <div class="row expanded cotiza">
+        <!-- mobile version-->
+        <div class="row show-for-small-only">
+          <div hyu-owl-plugin [owlresponsive]="itemshow" [owlloop]="false" class="meet-cotiza-mobile">
+            <div class="item">
+              <div class="small-12 columns bg-beige">
+                <!--<div class="text-center">
+                  <img [src]="currentVersionExteriorColor.frames_src[0]" alt="">
+                </div>-->
+                <h3 class="text-center">{{currentVersion?.title}} <small>{{currentVersion.caption_text}}</small></h3>
+                <div class="text-center" [innerHTML]="currentVersion?.content_text"></div>
+
+                <div class="row">
+                  <div class="small-12 columns">
+                    <div class="row">
+                      <div class="small-6 text-right columns">
+                        <strong>Version:</strong>
+                      </div>
+                      <div class="small-6 columns">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                          <li class="is-dropdown-submenu-parent">
+                            <a>{{currentVersion.caption_text}}</a>
+                            <ul class="menu">
+                              <li *ngFor="let version of versions">
+                                <a (click)="OnVersionChanged(version)">
+                                  {{version.caption_text}}
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="small-12 columns hide">
+                    <div class="row">
+                      <div class="small-6 text-right columns">
+                        <strong>Color exterior:</strong>
+                      </div>
+                      <div class="small-6 columns">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                          <li class="is-dropdown-submenu-parent">
+                            <a>{{currentVersionExteriorColor?.color_name}}</a>
+                            <ul class="menu">
+                              <li *ngFor="let color of currentVersionExteriorColors">
+                                <a (click)="VersionExteriorColorSelected(color)">
+                                  {{color.color_name}}
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="small-12 columns hide">
+                    <div class="row">
+                      <div class="small-6 text-right columns">
+                        <strong>Color interior:</strong>
+                      </div>
+                      <div class="small-6 columns">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                          <li class="is-dropdown-submenu-parent">
+                            <a>{{currentVersionInteriorColor?.color_name}}</a>
+                            <ul class="menu">
+                              <li *ngFor="let color of currentVersionInteriorColors">
+                                <a (click)="VersionInteriorColorSelected(color)">
+                                  {{color.color_name}}
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+            <div class="item">
+              <div class="small-12 columns bg-beige">
+                 <iframe [src]="'https://hyundaimotormex-leads.com/cotizacion/?modelo=' + currentVersion?.title + '&version=' + currentVersion?.caption_text | safeurl" frameborder="0" scrolling="yes"></iframe>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="small-12 nav-buttons text-center columns">
+              <a class="button" (click)="step = step - 1">
+                Regresar
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--desktop version-->
+        <div class="show-for-medium">
+          <div class="medium-12 large-5 columns bg-gray">
+            <!--<div class="text-center">
+              <img [src]="currentVersionExteriorColor.frames_src[0]" alt="">
+            </div>-->
+            <h3 class="text-center">{{currentVersion?.title}} <small>{{currentVersion.caption_text}}</small></h3>
+            <div class="text-center" [innerHTML]="currentVersion?.content_text"></div>
+
+            <div class="row">
+              <div class="small-12 columns">
+                <div class="row">
+                  <div class="small-6 text-right columns">
+                    <strong>Version:</strong>
+                  </div>
+                  <div class="small-6 columns">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                      <li class="is-dropdown-submenu-parent">
+                        <a>{{currentVersion.caption_text}}</a>
+                        <ul class="menu">
+                          <li *ngFor="let version of versions">
+                            <a (click)="OnVersionChanged(version)">
+                              {{version.caption_text}}
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="small-12 columns hide">
+                <div class="row">
+                  <div class="small-6 text-right columns">
+                    <strong>Color exterior:</strong>
+                  </div>
+                  <div class="small-6 columns">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                      <li class="is-dropdown-submenu-parent">
+                        <a>{{currentVersionExteriorColor?.color_name}}</a>
+                        <ul class="menu">
+                          <li *ngFor="let color of currentVersionExteriorColors">
+                            <a (click)="VersionExteriorColorSelected(color)">
+                              {{color.color_name}}
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="small-12 columns hide">
+                <div class="row">
+                  <div class="small-6 text-right columns">
+                    <strong>Color interior:</strong>
+                  </div>
+                  <div class="small-6 columns">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                      <li class="is-dropdown-submenu-parent">
+                        <a>{{currentVersionInteriorColor?.color_name}}</a>
+                        <ul class="menu">
+                          <li *ngFor="let color of currentVersionInteriorColors">
+                            <a (click)="VersionInteriorColorSelected(color)">
+                              {{color.color_name}}
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="small-12 nav-buttons text-center columns">
+                <a class="button" (click)="step = step - 2">
+                  Regresar
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="medium-12 large-7 columns bg-beige">
+            <iframe [src]="'https://hyundaimotormex-leads.com/cotizacion/?modelo=' + currentVersion?.title + '&version=' + currentVersion?.caption_text | safeurl" frameborder="0" scrolling="yes"></iframe>
+          </div>
+        </div>
+      </div>
+    </hyu-fullpage-slide-plugin>
+  </div>
+
+  <!--<div class="section" id="footer" hyu-footer></div>-->
+</div>

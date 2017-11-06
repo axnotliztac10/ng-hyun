@@ -1,0 +1,44 @@
+.testdrive-section {
+  .slide {
+    .fp-tableCell {
+      vertical-align: baseline !important;
+    }
+  }
+}
+@include breakpoint(small only) {
+  .testdrive-section{
+
+    #busca-distribuidor{
+      #map {
+        height: rem-calc(380) !important;
+      }
+      .direccion{
+        bottom: rem-calc(70) !important;
+      }
+    }
+  }
+
+} // end small
+@include breakpoint(medium only) {
+
+  .testdrive-section{
+
+    #busca-distribuidor{
+      #map {
+        //height: rem-calc(510) !important;
+      }
+    }
+  }
+
+} //end medium
+@include breakpoint(large) {
+  .testdrive-section{
+
+    #busca-distribuidor{
+      #map {
+        height: rem-calc(420) !important;
+      }
+    }
+  }
+
+} // end large

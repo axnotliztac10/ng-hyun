@@ -1,0 +1,488 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+@include breakpoint(small only) {
+  .finance-section{
+    //background-color: $beige;
+
+    .bg-finance{
+      background-color: $beige;
+    }
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .column-block{
+      line-height:rem-calc(13);
+      a{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(12);
+      }
+
+    }
+
+    .tabs{
+      border: none;
+      background-color: $white;
+    }
+
+    .tabs-panel, .tabs-content{
+      background: $white;
+    }
+
+    .tabs-title {
+      display: inline-block;
+      float: unset;
+      font-family: "HyundaiSansHead-Regular";
+      background-color: $tab-color-grey;
+      a, a:hover{
+        font-size: rem-calc(12);
+        color: $black;
+        background-color: $tab-color-grey;
+        padding:rem-calc(5 19);
+      }
+    }
+
+    .tabs-title.is-active{
+      background-color: $azul-cielo;
+      a{
+        color: $white;
+        background-color: $azul-cielo;
+      }
+    }
+
+    .callout{
+      border:none;
+      background: $white;
+      padding: 0;
+      h5{
+        color: $white;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(20);
+        line-height:rem-calc(20);
+        small{
+          color: $white;
+          font-size: rem-calc(12);
+        }
+
+      }
+      .finance-text{
+        padding:rem-calc(16);
+        text-align: center;
+        ul{
+          list-style-type: none;
+          li{
+            font-size: rem-calc(13);
+          }
+          &:before{
+            content: '';
+            display: block;
+            background-color: $azul;
+            height:3px;
+            width:50px;
+            margin: 10px auto;
+          }
+        }
+      }
+
+    }
+
+    .overlay-black{
+      background: rgba($black, 0.4);
+      padding:rem-calc(10);
+    }
+
+    .financehead01{
+      background-image: url("/assets/hardcode/img/HyundaiFinance01.jpg");
+    }
+    .financehead02{
+      background-image: url("/assets/hardcode/img/HyundaiFinance02.jpg");
+    }
+    .financehead03{
+      background-image: url("/assets/hardcode/img/HyundaiFinance03.jpg");
+    }
+    .financehead04{
+      background-image: url("/assets/hardcode/img/HyundaiFinance04.jpg");
+      h5{
+        color: $white;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(20);
+        line-height:rem-calc(20);
+        small{
+          color: $white;
+          font-size: rem-calc(12);
+        }
+      }
+    }
+
+
+    .financehead01, .financehead02, .financehead03, .financehead04{
+      background-repeat: no-repeat;
+      background-size: cover;
+      //height: rem-calc(80);
+      width: 100%;
+      //padding:rem-calc(10);
+      text-align: center;
+    }
+
+    .finance-separator{
+      border-left: solid $beige 2px;
+    }
+
+    #protect{
+      h3{
+        font-family: "HyundaiSansText-Medium";
+      }
+      .special{
+        font-family: "HyundaiSansHead-Light";
+        //font-size: rem-calc(12);
+      }
+      .finance-text{
+        padding:rem-calc(16);
+        background-color: $white;
+        font-size: rem-calc(9);
+        p{
+          margin-bottom: rem-calc(6);
+        }
+        img{
+          max-width: rem-calc(100);
+        }
+      }
+      .bg-solicitalo{
+        background-image: url("/assets/hardcode/img/HyundaiFinance04.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:rem-calc(413);
+        width: 100%;
+        position: relative;
+        text-align: center;
+        .btnsolicitalo{
+          @include button-style($azul, $azul, $white);
+          position: relative;
+          //bottom: rem-calc(30);
+          margin-top: rem-calc(330);
+          font-size: rem-calc(23);
+          font-family: "HyundaiSansText-Medium";
+          padding: rem-calc(12 30);
+        }
+      }
+    }
+
+  } //end finance section
+
+
+} // end small
+@include breakpoint(medium only) {
+
+
+  .finance-section{
+    //background-color: $beige;
+
+    .bg-finance{
+      background-color: $beige;
+    }
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .column-block{
+      line-height:rem-calc(13);
+      a{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(12);
+      }
+
+    }
+
+    .tabs{
+      border: none;
+      background-color: $beige;
+    }
+
+    .tabs-panel, .tabs-content{
+      background: transparent;
+    }
+
+    .tabs-title {
+      display: inline-block;
+      float: unset;
+      font-family: "HyundaiSansHead-Regular";
+      background-color: $tab-color-grey;
+      a, a:hover{
+        font-size: rem-calc(22);
+        color: $black;
+        background-color: $tab-color-grey;
+      }
+    }
+
+    .tabs-title.is-active{
+      background-color: $azul-cielo;
+      a{
+        color: $white;
+        background-color: $azul-cielo;
+      }
+    }
+
+    .callout{
+      border:none;
+      background: $white;
+      padding: 0;
+      h5{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        //font-size: rem-calc(18);
+        line-height:rem-calc(20);
+        small{
+          color: $black;
+          font-size: rem-calc(12);
+        }
+        &:after{
+          content: '';
+          display: block;
+          background-color: $azul;
+          height:3px;
+          width:80px;
+          margin-top: 10px;
+        }
+      }
+      .finance-text{
+        padding:rem-calc(16);
+        ul{
+          list-style-type: none;
+        }
+      }
+
+    }
+    .financehead01{
+      background-image: url("/assets/hardcode/img/HyundaiFinance01.jpg");
+    }
+    .financehead02{
+      background-image: url("/assets/hardcode/img/HyundaiFinance02.jpg");
+    }
+    .financehead03{
+      background-image: url("/assets/hardcode/img/HyundaiFinance03.jpg");
+    }
+
+
+    .financehead01, .financehead02, .financehead03{
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: rem-calc(70);
+      width: 100%;
+    }
+
+    .finance-separator{
+      border-left: solid $beige 2px;
+    }
+
+    #protect{
+      h3{
+        font-family: "HyundaiSansText-Medium";
+      }
+      .special{
+        font-family: "HyundaiSansHead-Light";
+        //font-size: rem-calc(12);
+      }
+      .finance-text{
+        padding:rem-calc(16);
+        background-color: $white;
+      }
+      .bg-solicitalo{
+        background-image: url("/assets/hardcode/img/HyundaiFinance04.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:rem-calc(630);
+        width: 100%;
+        position: relative;
+        text-align: center;
+        .btnsolicitalo{
+          @include button-style($azul, $azul, $white);
+          position: relative;
+          //bottom: rem-calc(30);
+          margin-top: rem-calc(330);
+          font-size: rem-calc(23);
+          font-family: "HyundaiSansText-Medium";
+          padding: rem-calc(12 30);
+        }
+      }
+    }
+
+
+  } //end finance section
+
+
+} //end medium
+@include breakpoint(large) {
+
+  .finance-section{
+    //background-color: $beige;
+
+    .bg-finance{
+      background-color: $beige;
+    }
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+        font-size: rem-calc(22);
+      }
+    }
+
+    .column-block{
+      line-height:rem-calc(13);
+      a{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(12);
+      }
+
+    }
+
+    .tabs{
+      border: none;
+      background-color: $beige;
+    }
+
+    .tabs-panel, .tabs-content{
+      background: transparent;
+    }
+
+    .tabs-title {
+      display: inline-block;
+      float: unset;
+      font-family: "HyundaiSansHead-Regular";
+      background-color: $tab-color-grey;
+      a, a:hover{
+        font-size: rem-calc(22);
+        color: $black;
+        background-color: $tab-color-grey;
+      }
+    }
+
+    .tabs-title.is-active{
+      background-color: $azul-cielo;
+      a{
+        color: $white;
+        background-color: $azul-cielo;
+      }
+    }
+
+    .callout{
+      border:none;
+      background: $white;
+      padding: 0;
+      h5{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        //font-size: rem-calc(18);
+        line-height:rem-calc(20);
+        small{
+          color: $black;
+          font-size: rem-calc(12);
+        }
+        &:after{
+          content: '';
+          display: block;
+          background-color: $azul;
+          height:3px;
+          width:80px;
+          margin-top: 10px;
+        }
+      }
+      .finance-text{
+        padding:rem-calc(16);
+        ul{
+          list-style-type: none;
+        }
+      }
+
+    }
+    .financehead01{
+      background-image: url("/assets/hardcode/img/HyundaiFinance01.jpg");
+    }
+    .financehead02{
+      background-image: url("/assets/hardcode/img/HyundaiFinance02.jpg");
+    }
+    .financehead03{
+      background-image: url("/assets/hardcode/img/HyundaiFinance03.jpg");
+    }
+
+
+    .financehead01, .financehead02, .financehead03{
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: rem-calc(70);
+      width: 100%;
+    }
+
+    .finance-separator{
+      border-left: solid $beige 2px;
+    }
+
+    #protect{
+      h3{
+        font-family: "HyundaiSansText-Medium";
+      }
+      .special{
+        font-family: "HyundaiSansHead-Light";
+        //font-size: rem-calc(12);
+      }
+      .finance-text{
+        padding:rem-calc(16);
+        background-color: $white;
+      }
+      .bg-solicitalo{
+        background-image: url("/assets/hardcode/img/HyundaiFinance04.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:rem-calc(413);
+        width: 100%;
+        position: relative;
+        text-align: center;
+        .btnsolicitalo{
+          @include button-style($azul, $azul, $white);
+          position: relative;
+          //bottom: rem-calc(30);
+          margin-top: rem-calc(330);
+          font-size: rem-calc(23);
+          font-family: "HyundaiSansText-Medium";
+          padding: rem-calc(12 30);
+        }
+      }
+    }
+
+
+  } //end finance section
+
+
+} // end large
+

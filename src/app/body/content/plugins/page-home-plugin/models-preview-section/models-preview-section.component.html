@@ -1,0 +1,101 @@
+<div class="fullheight">
+  <div *ngFor="let s of section">
+    <!-- home section -->
+    <div class="static-position" *ngIf="showall">
+
+      <div class="bg-w">
+        <div class="small-11 small-centered no-padding columns">
+          <div class="menu-centered">
+            <ul class="menu">
+              <li *ngFor="let c of s.children">
+                <a [id]="'btn_' + c.title.toLowerCase()" [attr.href]="'#' + c.title.toLowerCase()"
+                   (click)="Click(c)"
+                   [class.activemodel]="current == c">{{c.title}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-11 small-centered bg-b columns">
+        <div hyu-owl-plugin class="coches-slider">
+          <div class="item item-modelos" *ngFor="let item of items" [attr.data-hash]="item.alt_text">
+            <h1>{{item.title}}</h1>
+            <h2>{{item.caption_text}}</h2>
+            <p>{{item.content_text}}</p>
+            <img [src]="item.landscape_src" alt="{{item.alt_text}}">
+            <div class="menu-centered" *ngIf="!selectionEnabled">
+              <ul class="menu icon-top">
+                <li *ngFor="let attr of item.children">
+                  <div>
+                    <img [src]="attr.landscape_src" alt="{{attr.alt_text}}">
+                    <span>{{attr.title}}</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <a class="button" type="button" *ngIf="!selectionEnabled" [routerLink]="[item.link_to]">
+              {{item.link_text}}
+            </a>
+            <a class="button" type="button" *ngIf="selectionEnabled" (click)="Click(item)">
+              Selecciona
+            </a>
+          </div>
+        </div>
+        <div class="nav"></div>
+
+      </div>
+
+    </div>
+
+    <!-- meet section -->
+
+    <div class="meet-section-model" *ngIf="!showall">
+
+      <div class="bg-w">
+        <div class="small-11 small-centered no-padding columns">
+          <div class="menu-centered">
+            <ul class="menu">
+              <li *ngFor="let c of s.children">
+                <a [id]="'btn2_' + c.title.toLowerCase()" [attr.href]="'/conoce#' + c.title.toLowerCase()"
+                   (click)="Click(c)" onclick="javascript: return false;"
+                   [class.activemodel]="current == c">{{c.title}}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-11 small-centered bg-b columns">
+        <div hyu-owl-plugin class="coches-slider">
+          <div class="item item-modelos" *ngFor="let item of items" [attr.data-hash]="item.alt_text">
+            <h1>{{item.title}}</h1>
+            <h2>{{item.caption_text}}</h2>
+            <p>{{item.content_text}}</p>
+            <img [src]="item.landscape_src" alt="{{item.alt_text}}">
+            <div class="menu-centered" *ngIf="!selectionEnabled">
+              <ul class="menu icon-top">
+                <li *ngFor="let attr of item.children">
+                  <div>
+                    <img [src]="attr.landscape_src" alt="{{attr.alt_text}}">
+                    <span>{{attr.title}}</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <a class="button" type="button" *ngIf="!selectionEnabled">
+              {{item.link_text}}
+            </a>
+            <a class="button" type="button" *ngIf="selectionEnabled" (click)="Click(item)">
+              Selecciona
+            </a>
+          </div>
+        </div>
+        <div class="nav"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

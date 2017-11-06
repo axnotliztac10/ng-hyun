@@ -1,0 +1,307 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+
+@include breakpoint(small only) {
+
+  .assist-section{
+    background-color: $white;
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(10);
+      line-height: rem-calc(18);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .column-block{
+      line-height:rem-calc(13);
+      a{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(12);
+      }
+
+    }
+
+    .tabs{
+      border: none;
+    }
+
+    .tabs-title {
+      display: inline-block;
+      float: unset;
+      font-family: "HyundaiSansHead-Regular";
+      background-color: $tab-color-grey;
+      a, a:hover{
+        font-size: rem-calc(12);
+        color: $black;
+        background-color: $tab-color-grey;
+        padding:rem-calc(5 19);
+      }
+    }
+
+    .tabs-title.is-active{
+      background-color: $azul-cielo;
+      a{
+        color: $white;
+        background-color: $azul-cielo;
+      }
+    }
+
+    .serv-text{
+      background-color: $beige;
+    }
+
+    .callout{
+      border:none;
+      background: transparent;
+      h4{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(18);
+      }
+    }
+
+    .assist-separator{
+      border-left: solid $beige 2px;
+    }
+
+    #mexico{
+      height: rem-calc(340);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* deja que se desplace, con retardo */
+    }
+
+    .owl-assist{
+      .exclusiones{
+        -webkit-column-count: 1; /* Chrome, Safari, Opera */
+        -moz-column-count: 1; /* Firefox */
+        column-count: 1;
+        ul{
+          height: rem-calc(248);
+          overflow: auto;
+          margin: 0;
+          li{
+            list-style: none;
+            text-align: justify;
+            p{
+              font-size: rem-calc(11);
+              line-height: rem-calc(12);
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+  } //end assits section
+
+  .custom-reveal-assits{
+    border:0 !important;
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+    }
+    p{
+      font-size: rem-calc(12);
+      &:after{
+        content: "";
+        background-color: $azul;
+        width: 10%;
+        height: 3px;
+        margin: 22px auto;
+        display: block;
+      }
+    }
+    h5{
+      color: $black;
+      font-family: "HyundaiSansHead-Medium";
+    }
+
+  }
+
+
+} // end small
+@include breakpoint(medium only) {
+  .assist-section{
+    background-color: $white;
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .column-block{
+      line-height:rem-calc(13);
+      a{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(12);
+      }
+
+    }
+
+    .tabs{
+      border: none;
+    }
+
+    .tabs-title {
+      display: inline-block;
+      float: unset;
+      font-family: "HyundaiSansHead-Regular";
+      background-color: $tab-color-grey;
+      a, a:hover{
+        font-size: rem-calc(22);
+        color: $black;
+        background-color: $tab-color-grey;
+      }
+    }
+
+    .tabs-title.is-active{
+      background-color: $azul-cielo;
+      a{
+        color: $white;
+        background-color: $azul-cielo;
+      }
+    }
+
+    .serv-text{
+      background-color: $beige;
+    }
+
+    .callout{
+      border:none;
+      background: transparent;
+      h4{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(18);
+      }
+    }
+
+    .assist-separator{
+      border-left: solid $beige 2px;
+    }
+
+    .owl-assist{
+      .exclusiones{
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+        ul{
+          li{
+            list-style: none;
+            text-align: justify;
+          }
+        }
+      }
+    }
+
+  } //end assits section
+
+} //end medium
+@include breakpoint(large) {
+
+  .assist-section{
+    background-color: $white;
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+        font-size: rem-calc(22);
+
+      }
+    }
+
+    .column-block{
+      line-height:rem-calc(13);
+      a{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(12);
+      }
+
+    }
+
+    .tabs{
+      border: none;
+    }
+
+    .tabs-title {
+      display: inline-block;
+      float: unset;
+      font-family: "HyundaiSansHead-Regular";
+      background-color: $tab-color-grey;
+      a, a:hover{
+        font-size: rem-calc(22);
+        color: $black;
+        background-color: $tab-color-grey;
+      }
+    }
+
+    .tabs-title.is-active{
+      background-color: $azul-cielo;
+      a{
+        color: $white;
+        background-color: $azul-cielo;
+      }
+    }
+
+    .serv-text{
+      background-color: $beige;
+    }
+
+    .callout{
+      border:none;
+      background: transparent;
+      h4{
+        color: $black;
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(18);
+      }
+    }
+
+    .assist-separator{
+      border-left: solid $beige 2px;
+    }
+
+    .owl-assist{
+      .exclusiones{
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+        ul{
+          li{
+            list-style: none;
+            text-align: justify;
+          }
+        }
+      }
+    }
+
+  } //end assits section
+
+
+} // end large

@@ -1,0 +1,441 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+@include breakpoint(small only) {
+
+  // security - home
+
+  .version-content{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .bgbeige{
+      background-color: $beige-fuerte;
+      padding:rem-calc(10);
+    }
+    p{
+      line-height: rem-calc(14);
+    }
+  }
+
+  h1{
+    font-family: "HyundaiSansHead-Medium";
+    color: $black;
+    margin: 0;
+    //padding:rem-calc(120 0 0);
+  }
+
+  h3{
+    font-family: "HyundaiSansHead-Medium";
+  }
+
+  small{
+    color: $black !important;
+    font-family: "HyundaiSansHead-Regular";
+  }
+
+  .bgwhite{
+    background-color: $white;
+  }
+
+  .bgbeige{
+    background-color: $beige;
+  }
+
+  .gotoversion{
+    a{
+      color: $black;
+      &:hover{
+        .container-version{
+          .container-img{
+            filter:opacity(100%) brightness(130%);
+          }
+        }
+      }
+      h1{
+        line-height:rem-calc(10);
+      }
+
+    }
+    .container-img{
+      filter:opacity(10%) brightness(3);
+    }
+  }
+
+  .container-version{
+    position: relative;
+
+    .container-text{
+      position: absolute;
+      z-index:2;
+      bottom:  0;
+      left: rem-calc(30);
+      transition: all 1s ease 0s;
+      h5{
+        font-size: rem-calc(12);
+      }
+    }
+    .container-img{
+      position: relative;
+      z-index:1;
+      transition: all 1s ease 0s;
+      img{
+        object-fit: cover;
+        width: 100%;
+        max-height: rem-calc(80);
+        //object-fit: none;
+        //object-position: 50% 50%;
+      }
+    }
+  }
+
+  hr{
+    border-color: $beige-fuerte;
+  }
+
+  .button-group{
+    margin-top: rem-calc(33);
+  }
+  .button{
+    font-family: "HyundaiSansHead-Regular";
+    font-size: rem-calc(9) !important;
+    @include button-style(rgba($azul, 0.9), $azul, $white);
+  }
+
+  // close ico
+  .close-ico {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    background-color: $gris;
+  }
+  .close-ico:hover {
+    opacity: 1;
+  }
+  .close-ico:before, .close-ico:after {
+    position: absolute;
+    left: 16px;
+    top:9px;
+    content: ' ';
+    height: 16px;
+    width: 2px;
+    background-color: $white;
+  }
+  .close-ico:before {
+    transform: rotate(45deg);
+  }
+  .close-ico:after {
+    transform: rotate(-45deg);
+  }
+
+  .item{
+    padding-left: rem-calc(0);
+  }
+
+  .column-li-3{
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+  }
+
+} // end small
+
+@include breakpoint(medium only) {
+  // security - home
+
+  .version-content{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .bgbeige{
+      background-color: $beige-fuerte;
+      padding:rem-calc(120 0 0);
+    }
+  }
+
+  h1{
+    font-family: "HyundaiSansHead-Medium";
+    color: $black;
+    margin: 0;
+    //padding:rem-calc(120 0 0);
+  }
+
+  h3{
+    font-family: "HyundaiSansHead-Medium";
+  }
+
+  small{
+    color: $black !important;
+    font-family: "HyundaiSansHead-Regular";
+  }
+
+  .bgwhite{
+    background-color: $white;
+  }
+
+  .bgbeige{
+    background-color: $beige;
+  }
+
+  .gotoversion{
+    a{
+      color: $black;
+      &:hover{
+        .container-version{
+          .container-img{
+            filter:opacity(100%) brightness(130%);
+          }
+          //.container-text{
+          //  bottom:0;
+          //  top:rem-calc(30);
+          //}
+        }
+      }
+      h1{
+        line-height:rem-calc(40);
+      }
+
+    }
+    .container-img{
+      filter:opacity(30%) brightness(200%);
+      position: relative;
+      z-index:1;
+      transition: all 1s ease 0s;
+      img{
+        object-fit: cover;
+        width: 100%;
+        max-height: rem-calc(350);
+        //object-fit: none;
+        //object-position: 50% 50%;
+      }
+    }
+  }
+
+  .container-version{
+    position: relative;
+
+    .container-text{
+      position: absolute;
+      z-index:2;
+      bottom:  20%;
+      left: rem-calc(30);
+      transition: all 1s ease 0s;
+      h1{
+        font-size: rem-calc(34);
+        line-height:rem-calc(24);
+      }
+      h5{
+        font-size: rem-calc(20);
+      }
+    }
+    .container-img{
+      position: relative;
+      z-index:1;
+      transition: all 1s ease 0s;
+      img{
+        object-fit: cover;
+        width: 100%;
+        max-height: rem-calc(300);
+        //object-fit: none;
+        //object-position: 50% 50%;
+      }
+    }
+  }
+
+  hr{
+    border-color: $beige-fuerte;
+  }
+
+  .button{
+    font-family: "HyundaiSansHead-Regular";
+    font-size: rem-calc(13) !important;
+    @include button-style($azul, $azul, $white);
+  }
+
+  // close ico
+  .close-ico {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 52px;
+    height: 52px;
+    opacity: 0.3;
+    background-color: $gris;
+  }
+  .close-ico:hover {
+    opacity: 1;
+  }
+  .close-ico:before, .close-ico:after {
+    position: absolute;
+    left: 25px;
+    top:9px;
+    content: ' ';
+    height: 36px;
+    width: 2px;
+    background-color: $white;
+  }
+  .close-ico:before {
+    transform: rotate(45deg);
+  }
+  .close-ico:after {
+    transform: rotate(-45deg);
+  }
+
+  .item{
+    padding-left: rem-calc(20);
+  }
+
+  .column-li-3{
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+  }
+
+} //end medium
+
+@include breakpoint(large) {
+
+  // security - home
+
+  .version-content{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .bgbeige{
+      background-color: $beige-fuerte;
+      padding:rem-calc(140 0 0);
+    }
+    p{
+      font-family: "HyundaiSansHead-Regular";
+      font-size:rem-calc(24) !important;
+    }
+  }
+
+  h1{
+    font-family: "HyundaiSansHead-Medium";
+    color: $black;
+    margin: 0;
+    //padding:rem-calc(120 0 0);
+  }
+
+  h3{
+    font-family: "HyundaiSansHead-Medium";
+  }
+
+  small{
+    color: $black !important;
+    font-family: "HyundaiSansHead-Regular";
+  }
+
+  .bgwhite{
+    background-color: $white;
+  }
+
+  .bgbeige{
+    background-color: $beige;
+  }
+
+  .gotoversion{
+    a{
+      color: $black;
+      &:hover{
+        .container-version{
+          .container-img{
+            filter:opacity(100%) brightness(130%);
+          }
+          //.container-text{
+          //  bottom:0;
+          //  top:rem-calc(30);
+          //}
+        }
+      }
+      h1{
+        line-height:rem-calc(40);
+      }
+
+    }
+    .container-img{
+      filter:opacity(30%) brightness(200%);
+    }
+  }
+
+  .container-version{
+    position: relative;
+
+    .container-text{
+      position: absolute;
+      z-index:2;
+      //bottom:  20%;
+      top:5%;
+      left: rem-calc(30);
+      transition: all 1s ease 0s;
+      h1{
+        font-size: rem-calc(27);
+      }
+    }
+    .container-img{
+      position: relative;
+      z-index:1;
+      transition: all 1s ease 0s;
+      img{
+        object-fit: cover;
+        width: 100%;
+        //object-fit: none;
+        //object-position: 50% 50%;
+      }
+    }
+  }
+
+  hr{
+    border-color: $beige-fuerte;
+  }
+
+  .button{
+    font-family: "HyundaiSansHead-Regular";
+    font-size: rem-calc(24) !important;
+    @include button-style($azul, $azul, $white);
+  }
+
+  // close ico
+  .close-ico {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 52px;
+    height: 52px;
+    opacity: 0.3;
+    background-color: $gris;
+  }
+  .close-ico:hover {
+    opacity: 1;
+  }
+  .close-ico:before, .close-ico:after {
+    position: absolute;
+    left: 25px;
+    top:9px;
+    content: ' ';
+    height: 36px;
+    width: 2px;
+    background-color: $white;
+  }
+  .close-ico:before {
+    transform: rotate(45deg);
+  }
+  .close-ico:after {
+    transform: rotate(-45deg);
+  }
+
+  .item{
+    padding-left: rem-calc(20);
+  }
+
+  .column-li-3{
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+  }
+
+} // end large

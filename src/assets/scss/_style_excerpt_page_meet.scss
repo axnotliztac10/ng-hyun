@@ -1,0 +1,82 @@
+.meet-section{
+  .slide{
+    .fp-tableCell{
+      //display: table !important;
+      vertical-align: baseline !important;
+    }
+  }
+}
+
+@include breakpoint(small only) {
+
+  .meet-section-model{
+    background-color: $beige;
+  }
+
+  .meet-li-version{
+    ul{
+      list-style:none !important;
+      li{
+        padding: rem-calc(0);
+        font-size: rem-calc(11);
+        text-align: center;
+        &:nth-child(even) {
+          color: $black;
+        }
+        &:nth-child(odd) {
+          color: $gris;
+        }
+      }
+    }
+  }
+
+
+} // end small
+@include breakpoint(medium only) {
+  .meet-section-model{
+    background-color: $beige;
+  }
+
+  .meet-li-version{
+    ul{
+      list-style:none !important;
+      li{
+        padding: rem-calc(0);
+        font-size: rem-calc(16);
+        text-align: center;
+        &:nth-child(even) {
+          color: $black;
+        }
+        &:nth-child(odd) {
+          color: $gris;
+        }
+      }
+    }
+  }
+
+} //end medium
+@include breakpoint(large) {
+
+  .meet-li-version{
+    ul{
+      list-style:none !important;
+      li{
+        padding: rem-calc(0);
+        font-size: rem-calc(16);
+        text-align: center;
+        &:nth-child(even) {
+          color: $black;
+        }
+        &:nth-child(odd) {
+          color: $gris;
+        }
+      }
+    }
+  }
+
+} // end large
+
+
+
+
+

@@ -1,0 +1,373 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+
+@include breakpoint(small only) {
+  // performance - home
+
+  .slide-img{
+    position: relative;
+    z-index: 1;
+    img{
+      //width: 100%;
+      object-fit: none;
+      object-position: 50% 50%;
+      min-height:600px;
+      //overflow: hidden;
+      //max-width: unset;
+    }
+  }
+
+  .slide-caption{
+    position: absolute;
+    z-index: 2;
+    //margin-left:rem-calc(100);
+    background-color: transparent;
+    width: 30.7%;
+
+    h2{
+      color: $black;
+      font-size: rem-calc(30);
+      line-height: rem-calc(20);
+      font-family: "HyundaiSansHead-Medium";
+      padding: rem-calc(4 0);
+      background-color: $beige;
+      text-align: center;
+      margin: 0;
+    }
+    .mobile-small{
+      font-size: rem-calc(15);
+    }
+
+  }
+
+  // performance - performance
+
+  .bgazul{
+    background: rgba($azul, 0.93);
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+      color: $white;
+      margin: 0;
+      padding:rem-calc(30 10);
+    }
+  }
+
+  p{
+    font-family: "HyundaiSansHead-Regular";
+  }
+
+  .bgwhite{
+    background-color: $white;
+  }
+
+
+  .performance-content{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .bgwhite{
+      h2{
+        font-family: "HyundaiSansHead-Medium";
+        font-size: rem-calc(14);
+      }
+    }
+  }
+
+  .performance-item{
+    //background-color: $white;
+    margin-top: rem-calc(15);
+    h3{
+      font-family: "HyundaiSansText-Bold";
+    }
+    h4{
+      font-family: "HyundaiSansText-Medium";
+      font-size: rem-calc(12);
+    }
+    p{
+      font-family: "HyundaiSansHead-Regular";
+      font-size: rem-calc(10);
+    }
+  }
+
+  // close ico
+  .close-ico {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    background-color: $gris;
+  }
+  .close-ico:hover {
+    opacity: 1;
+  }
+  .close-ico:before, .close-ico:after {
+    position: absolute;
+    left: 16px;
+    top:7px;
+    content: ' ';
+    height: 21px;
+    width: 2px;
+    background-color: $white;
+  }
+  .close-ico:before {
+    transform: rotate(45deg);
+  }
+  .close-ico:after {
+    transform: rotate(-45deg);
+  }
+
+} // end small
+
+@include breakpoint(medium only) {
+  .slide-img{
+    position: relative;
+    z-index: 1;
+    img{
+      //width: 100%;
+      object-fit: none;
+      object-position: 50% 50%;
+      height:100%;
+      //overflow: hidden;
+      //max-width: unset;
+    }
+  }
+
+  .slide-caption{
+    position: absolute;
+    z-index: 2;
+    bottom: rem-calc(180);
+    margin-left:rem-calc(100);
+    background-color: transparent;
+    width: 15%;
+
+    h2{
+      color: $white;
+      font-size: rem-calc(40);
+      line-height: rem-calc(38);
+      font-family: "HyundaiSansHead-Medium";
+      padding: rem-calc(10);
+    }
+
+  }
+
+  // performance - performance
+
+  .bgazul{
+    background: rgba($azul, 0.93);
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+      color: $white;
+      margin: 0;
+      padding:rem-calc(120 0 0);
+    }
+  }
+
+  h3{
+    font-family: "HyundaiSansHead-Medium";
+  }
+
+  .bgwhite{
+    background: rgba($white, 0.9);
+  }
+
+  .performance-content{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height:100%;
+    p{
+      font-family: "HyundaiSansHead-Regular";
+      font-size: rem-calc(16);
+      margin: 0;
+    }
+  }
+  .performance-item{
+    //background-color: $white;
+    h3{
+      font-family: "HyundaiSansText-Bold";
+      font-size: rem-calc(28);
+    }
+    h4{
+      font-family: "HyundaiSansText-Medium";
+      font-size: rem-calc(21);
+    }
+    p{
+      font-family: "HyundaiSansHead-Regular";
+      font-size: rem-calc(14);
+    }
+
+  }
+
+  // close ico
+  .close-ico {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 52px;
+    height: 52px;
+    opacity: 0.3;
+    background-color: $gris;
+  }
+  .close-ico:hover {
+    opacity: 1;
+  }
+  .close-ico:before, .close-ico:after {
+    position: absolute;
+    left: 25px;
+    top:9px;
+    content: ' ';
+    height: 36px;
+    width: 2px;
+    background-color: $white;
+  }
+  .close-ico:before {
+    transform: rotate(45deg);
+  }
+  .close-ico:after {
+    transform: rotate(-45deg);
+  }
+
+} //end medium
+
+@include breakpoint(large) {
+  // performance - home
+
+  .slide-img{
+    position: relative;
+    z-index: 1;
+    img{
+      //width: 100%;
+      object-fit: none;
+      object-position: 50% 50%;
+      height:100%;
+      //overflow: hidden;
+      //max-width: unset;
+    }
+  }
+
+  .slide-caption{
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+    margin-left:rem-calc(30);
+    background-color: transparent;
+    width: 12%;
+
+    h2{
+      color: $white;
+      font-size: rem-calc(38);
+      line-height: rem-calc(38);
+      font-family: "HyundaiSansHead-Medium";
+      //padding: rem-calc(10);
+      text-shadow: 4px 4px 6px $black;
+      width: 74%;
+    }
+
+  }
+
+  // performance - performance
+
+  .bgazul{
+    background: rgba($azul, 0.93);
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+      color: $white;
+      margin: 0;
+      padding:rem-calc(130 0 0);
+    }
+  }
+
+  .bgwhite{
+    background: rgba($white, 0.9);
+    h3{
+      font-family: "HyundaiSansHead-Medium";
+      margin-bottom: 0;
+      font-size: rem-calc(22);
+      padding-bottom: rem-calc(20);
+      padding-top: rem-calc(20);
+    }
+    .small-1{
+      display: block;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .performance-content{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height:100%;
+    p{
+      font-family: "HyundaiSansHead-Regular";
+      font-size: rem-calc(16);
+      margin: 0;
+      line-height:rem-calc(22);
+      p{
+        line-height:rem-calc(22);
+      }
+    }
+  }
+
+
+  .performance-item{
+    //background-color: $white;
+    h3{
+      font-family: "HyundaiSansText-Bold";
+      font-size: rem-calc(28);
+      line-height:rem-calc(30);
+    }
+    h4{
+      font-family: "HyundaiSansText-Medium";
+      font-size: rem-calc(21);
+    }
+    p{
+      font-family: "HyundaiSansHead-Regular";
+      font-size: rem-calc(17);
+      line-height:rem-calc(22);
+      p{
+        line-height:rem-calc(22);
+      }
+    }
+
+  }
+
+
+  // close ico
+  .close-ico {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 42px;
+    height: 42px;
+    opacity: 0.3;
+    background-color: $gris;
+  }
+  .close-ico:hover {
+    opacity: 1;
+  }
+  .close-ico:before, .close-ico:after {
+    position: absolute;
+    left: 21px;
+    top:9px;
+    content: ' ';
+    height: 26px;
+    width: 2px;
+    background-color: $white;
+  }
+  .close-ico:before {
+    transform: rotate(45deg);
+  }
+  .close-ico:after {
+    transform: rotate(-45deg);
+  }
+
+} // end large
+
+
+video {
+  width: 100%;
+}

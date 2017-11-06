@@ -1,0 +1,263 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+
+
+@include breakpoint(small only) {
+
+  .detail{
+    position: absolute;
+    width: 48px;
+    //padding: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    transform: scale(0.8);
+    opacity:0.7;
+    transition: all 1s ease 0s;
+    &:hover{
+      transform: scale(1);
+      opacity:1;
+    }
+  }
+
+  a{
+    &:hover + .custom-tooltip{
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  .custom-tooltip{
+    color: $white;
+    font-family: "HyundaiSansHead-Medium";
+    display: none;
+    opacity:0;
+    position: absolute;
+    background: rgba($azul, 0.85) ;
+    width: rem-calc(230);
+    padding:rem-calc(10);
+    transition: all 1s ease 0s;
+  }
+
+  // reveal
+  .reveal{
+    padding:0;
+    border:none;
+    background-color: $azul;
+    h5{
+      color: $white;
+      padding: rem-calc(10 10 0);
+      font-size: rem-calc(25);
+      font-family: "HyundaiSansHead-Medium";
+    }
+    p{
+      color: $white;
+      padding: rem-calc(0 10);
+      font-size: rem-calc(16);
+    }
+    .close-button{
+      background-color: $azul;
+      color: $white;
+      border-radius: 50%;
+      width: 35px;
+      border: solid $white 3px;
+      top:rem-calc(4);
+      right: rem-calc(4);
+      margin-top: 0;
+    }
+  }
+  ////360
+  //.spritespin{
+  //  &.spritespin-instance.nopanoramic{
+  //    width: 100% !important;
+  //    .spritespin-stage{
+  //      background-size: contain !important;
+  //      background-repeat: no-repeat !important;
+  //    }
+  //  }
+  //}
+  ////pano
+  //.spritespin{
+  //  &.spritespin-instance.panoramic{
+  //    width: 100% !important;
+  //    height: rem-calc(290) !important;
+  //    .spritespin-stage{
+  //      background-size: cover !important;
+  //      background-repeat: no-repeat !important;
+  //    }
+  //  }
+  //}
+
+
+} // end small
+@include breakpoint(medium only) {
+
+
+  .detail{
+    position: absolute;
+    width: 48px;
+    //padding: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    transform: scale(0.8);
+    opacity:0.7;
+    transition: all 1s ease 0s;
+    &:hover{
+      transform: scale(1);
+      opacity:1;
+    }
+  }
+
+  a{
+    &:hover + .custom-tooltip{
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  .custom-tooltip{
+    color: $white;
+    font-family: "HyundaiSansHead-Medium";
+    display: none;
+    opacity:0;
+    position: absolute;
+    background: rgba($azul, 0.85) ;
+    width: rem-calc(230);
+    padding:rem-calc(10);
+    transition: all 1s ease 0s;
+  }
+
+  // reveal
+  .reveal{
+    padding:0;
+    border:none;
+    background-color: $azul;
+    h5{
+      color: $white;
+      padding: rem-calc(10 10 0);
+      font-size: rem-calc(25);
+      font-family: "HyundaiSansHead-Medium";
+    }
+    p{
+      color: $white;
+      padding: rem-calc(0 10);
+      font-size: rem-calc(16);
+    }
+    .close-button{
+      background-color: $azul;
+      color: $white;
+      border-radius: 50%;
+      width: 35px;
+      border: solid $white 3px;
+      top:rem-calc(4);
+      right: rem-calc(4);
+      margin-top: 0;
+    }
+  }
+  ////360
+  //.spritespin{
+  //  &.spritespin-instance.nopanoramic{
+  //    width: 100% !important;
+  //    .spritespin-stage{
+  //      background-size: contain !important;
+  //      background-repeat: no-repeat !important;
+  //    }
+  //  }
+  //}
+  ////pano
+  //.spritespin{
+  //  &.spritespin-instance.panoramic{
+  //    width: 100% !important;
+  //    height: rem-calc(760) !important;
+  //    .spritespin-stage{
+  //      background-size: cover !important;
+  //      background-repeat: no-repeat !important;
+  //    }
+  //  }
+  //}
+
+
+} //end medium
+@include breakpoint(large) {
+
+  .contenedor-sprite{
+    width: 100%;
+    position: relative;
+    display: block;
+    z-index: 1;
+  }
+
+  .detail{
+    position: absolute;
+    width: 48px;
+    //padding: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    transform: scale(0.8);
+    opacity:0.7;
+    transition: all .3s ease 0s;
+    &:hover{
+      transform: scale(1);
+      opacity:1;
+    }
+  }
+
+  a{
+    &:hover + .custom-tooltip{
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  .custom-tooltip{
+    color: $white;
+    font-family: "HyundaiSansHead-Medium";
+    display: none;
+    opacity:0;
+    position: absolute;
+    background: rgba($azul, 0.85) ;
+    width: rem-calc(230);
+    padding:rem-calc(10);
+    transition: all 1s ease 0s;
+  }
+
+  // reveal
+  .reveal{
+    padding:0;
+    border:none;
+    background-color: $azul;
+    h5{
+      color: $white;
+      padding: rem-calc(10 10 0);
+      font-size: rem-calc(25);
+      font-family: "HyundaiSansHead-Medium";
+    }
+    p{
+      color: $white;
+      padding: rem-calc(0 10);
+      font-size: rem-calc(16);
+    }
+    .close-button{
+      background-color: $azul;
+      color: $white;
+      border-radius: 50%;
+      width: 35px;
+      border: solid $white 3px;
+      top:rem-calc(4);
+      right: rem-calc(4);
+      margin-top: 0;
+    }
+  }
+  ////pano
+  //.spritespin{
+  //  &.spritespin-instance{
+  //    width: 100% !important;
+  //    & > div{
+  //      background-size: contain !important;
+  //      background-repeat: no-repeat !important;
+  //    }
+  //  }
+  //}
+
+} // end large
+

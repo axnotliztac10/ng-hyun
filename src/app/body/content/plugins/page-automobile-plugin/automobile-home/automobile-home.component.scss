@@ -1,0 +1,151 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+// automobile
+
+.full-height{
+  height: 100%;
+}
+
+
+@include breakpoint(small only) {
+  .slide-img{
+    position: relative;
+    z-index: 1;
+    //background-repeat: no-repeat;
+    //background-size: contain ;
+    //padding: 100% 50%;
+    //background-position-x: center;
+    //background-position-y: top;
+
+    img{
+      //width: 100%;
+      //object-fit: none;
+      //object-position: 50% 74%;
+      //height: 100%;
+      //overflow: hidden;
+      //max-width: unset;
+    }
+  }
+
+  .slide-caption{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    top: rem-calc(80);
+    background-color: transparent;
+    //width: 30.5%;
+
+    h2{
+      color: $white;
+      font-size: rem-calc(30);
+      line-height: rem-calc(30);
+      font-family: "HyundaiSansHead-Medium";
+      padding: rem-calc(10);
+    }
+    p{
+      font-family: "HyundaiSansHead-Regular";
+      font-size: rem-calc(25);
+      color: $white;
+    }
+
+  }
+
+}// end small
+
+
+@include breakpoint(medium only) {
+  .slide-img{
+    position: relative;
+    z-index: 1;
+    top:rem-calc(0);
+    //background-repeat: no-repeat;
+    //background-size: cover ;
+    //padding: 100% 50%;
+    //background-position-x: center;
+    //background-position-y: top;
+    img{
+      //width: 100%;
+      object-fit: none;
+      object-position: 50% 50%;
+      height: 100%
+      //overflow: hidden;
+      //max-width: unset;
+    }
+  }
+
+  .slide-caption{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    top: rem-calc(220);
+    background-color: transparent;
+    //width: 30.5%;
+    max-height: rem-calc(200);
+    text-align: center;
+
+    h2{
+      color: $white;
+      font-size: rem-calc(50);
+      line-height: rem-calc(30);
+      font-family: "HyundaiSansHead-Medium";
+      padding: rem-calc(10);
+    }
+    p{
+      font-family: "HyundaiSansHead-Regular";
+      font-size: rem-calc(25);
+      color: $white;
+    }
+
+  }
+
+} // end medium
+
+@include breakpoint(large) {
+
+  .slide-img{
+    position: relative;
+    z-index: 1;
+    //background-repeat: no-repeat;
+    //background-size: cover ;
+    //padding: 50%;
+    //background-position-x: center;
+    //background-position-y: top;
+    img{
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      min-height: unset;
+      //overflow: hidden;
+      //max-width: unset;
+    }
+  }
+
+  .slide-caption{
+    position: absolute;
+    z-index: 2;
+    top: rem-calc(250);
+    background-color: transparent;
+    //width: 30.5%;
+    text-align: center;
+
+    h2{
+      color: $white;
+      font-size: rem-calc(50);
+      line-height: rem-calc(30);
+      font-family: "HyundaiSansHead-Medium";
+      padding: rem-calc(10);
+    }
+    p{
+      font-family: "HyundaiSansHead-Regular";
+      font-size: rem-calc(25);
+      color: $white;
+    }
+
+  }
+
+} // end large
+
+video {
+  width: 100%;
+}

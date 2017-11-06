@@ -1,0 +1,37 @@
+<!-- Owl 1 -->
+<div class="full-height-security">
+<hyu-fullpage-slide-plugin *ngFor="let content of section">
+  <div class="bgwhite">
+
+    <div class="security-content">
+      <div class="bgbeige text-center">
+        <h2>{{content.title}}</h2>
+        <p>{{content.caption_text}}</p>
+      </div>
+
+      <div class="row expanded">
+        <div class="small-11 small-centered columns">
+          <div hyu-owl-plugin [owlresponsive]="itemshow" [owlloop]="false" class="security-item">
+            <div class="item" *ngFor="let item of content.children">
+              <div class="row">
+                <div class="small-12 medium-8 small-centered text-center columns">
+                  <h3>{{item.title}}</h3>
+                  <img class="the_other_gifs" [attr.data-src]="item.landscape_src" alt="security">
+                  <div class="row">
+                    <div class="small-8 columns small-centered">
+                      <div class="content-text-class" [innerHTML]="item.content_text"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</hyu-fullpage-slide-plugin>
+</div>

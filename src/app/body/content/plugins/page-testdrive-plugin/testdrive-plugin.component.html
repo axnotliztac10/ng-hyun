@@ -1,0 +1,57 @@
+<hyu-page-submenu-plugin></hyu-page-submenu-plugin>
+
+<div id="hyundai-content">
+  <div class="section bgsection01 testdrive-section">
+
+    <div class="small-11 small-centered text-center no-padding columns">
+      <h2>Prueba de manejo <br><small>Vive la experiencia Hyundai</small></h2>
+    </div>
+
+    <!--Step 1: Model -->
+    <hyu-fullpage-slide-plugin *ngIf="step === 0">
+      <hyu-models-preview-section
+        [section]="homepage?.screenplay[1]"
+        [selectionEnabled]="true"
+        [showall]="false">
+      </hyu-models-preview-section>
+    </hyu-fullpage-slide-plugin>
+
+    <!--Step 2: Dealer -->
+    <hyu-fullpage-slide-plugin *ngIf="step === 1">
+      <div class="row expanded testdrive-step-2">
+        <div class="small-12 columns no-padding">
+          <hyu-dealers-map (ondealerselected)="OnDealerClicked($event)" [showHeader]="false"></hyu-dealers-map>
+          <div class="small-12 nav-buttons text-center columns">
+            <a class="button" [routerLink]="['../']">
+              Regresar
+            </a>
+            <a class="button" (click)="OnDealerSelected()" *ngIf="dealer != null">
+              Selecciona
+            </a>
+          </div>
+        </div>
+      </div>
+    </hyu-fullpage-slide-plugin>
+
+    <!--Step 3: Form-->
+    <hyu-fullpage-slide-plugin *ngIf="step === 2">
+      <div class="row expanded testdrive-step-3">
+        <div class="medium-12 large-7 columns no-padding">
+          <iframe [src]="'https://hyundaimotormex-leads.com/cotizacion?modelo=' + page?.title + dealerUrl | safeurl" frameborder="0" scrolling="yes"></iframe>
+        </div>
+        <div class="medium-12 large-5 testdrive-contact text-right show-for-medium columns">
+          <h3>Teléfono:</h3>
+          <h5>01 800 <span>Hyundai</span><small> (4986324)</small></h5>
+          <p>Lunes a Viernes de 8:00 a 19:00 hrs.</p>
+          <p>Sábados de 9:00 a 13:00 hrs.</p>
+          <h6>* Llamadas sin costo dentro de la República Méxicana.</h6>
+        </div>
+        <div class="small-12 nav-buttons text-center columns">
+          <a class="button" [routerLink]="['../']">
+            Regresar
+          </a>
+        </div>
+      </div>
+    </hyu-fullpage-slide-plugin>
+  </div>
+</div>

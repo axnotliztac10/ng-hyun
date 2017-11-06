@@ -1,0 +1,39 @@
+.dealers-section {
+    .fp-tableCell {
+      vertical-align: baseline !important;
+    }
+}
+@include breakpoint(small only) {
+  .dealers-section{
+
+    #busca-distribuidor{
+      #map {
+        height: rem-calc(370) !important;
+      }
+    }
+  }
+
+} // end small
+@include breakpoint(medium only) {
+
+  .dealers-section{
+
+    #busca-distribuidor{
+      #map {
+        //height: rem-calc(510) !important;
+      }
+    }
+  }
+
+} //end medium
+@include breakpoint(large) {
+  .dealers-section{
+
+    #busca-distribuidor{
+      #map {
+        height: rem-calc(400) !important;
+      }
+    }
+  }
+
+} // end large

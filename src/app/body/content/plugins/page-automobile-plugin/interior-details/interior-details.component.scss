@@ -1,0 +1,66 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+@include breakpoint(small only) {
+  .small-11{
+    //background-color: $white;
+    //height:100%;
+    position: relative;
+  }
+
+  .show-for-small-only{
+    h1{
+      font-family: "HyundaiSansHead-Medium";
+      color: $white;
+      line-height: rem-calc(18);
+      background-color: $azul;
+      font-size: rem-calc(20);
+      margin: 0;
+      padding: rem-calc(10);
+    }
+  }
+
+} // end small
+@include breakpoint(medium only) {
+
+  .small-11{
+    //background-color: $white;
+    //height:100%;
+    position: relative;
+  }
+  .title-180{
+    position: absolute;
+    bottom: rem-calc(80);
+    left:rem-calc(80);
+    z-index:1;
+    width: 50%;
+    h1{
+      font-family: "HyundaiSansHead-Medium";
+      color: $white;
+      line-height: rem-calc(47);
+    }
+  }
+
+} //end medium
+@include breakpoint(large) {
+  .small-11{
+    //background-color: $white;
+    height:100%;
+    position: relative;
+  }
+  .title-180{
+    position: absolute;
+    bottom: rem-calc(80);
+    left:rem-calc(80);
+    z-index:1;
+    width: 40%;
+    h1{
+      font-family: "HyundaiSansHead-Medium";
+      color: $white;
+      line-height: rem-calc(47);
+    }
+  }
+
+} // end large
+
+

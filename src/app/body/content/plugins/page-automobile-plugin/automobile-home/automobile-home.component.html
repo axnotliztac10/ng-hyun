@@ -1,0 +1,15 @@
+<hyu-fullpage-slide-plugin *ngFor="let slide of section; let i = index">
+
+  <!--<div class="slide-caption" [style.width]="(100 / section.length) + '%'">-->
+    <!--<h2>{{slide.title}}</h2>-->
+    <!--<p class="show-for-medium">{{slide.caption_text}}</p>-->
+    <!--<div [innerHTML]="slide.content_text"></div>-->
+  <!--</div>-->
+
+  <div class="slide-img">
+    <img *ngIf="!slide?.landscape_is_video" id="data-img-{{i}}" >
+    <!--<img *ngIf="!slide?.landscape_is_video"  [attr.data-interchange]="'[' + slide.portrait_src + ', small], [' + slide.landscape_src + ', medium]'">-->
+    <hyu-video-player *ngIf="slide?.landscape_is_video" [src]="slide?.landscape_src"></hyu-video-player>
+  </div>
+
+</hyu-fullpage-slide-plugin>

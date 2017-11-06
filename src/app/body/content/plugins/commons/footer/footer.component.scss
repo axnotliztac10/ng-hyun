@@ -1,0 +1,264 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+//@import "./src/assets/scss/foundation-icons/foundation-icons";
+
+@include breakpoint(small only) {
+
+  footer{
+    background-color: $azul;
+    .line-border{
+      border-right: 1px $white solid;
+    }
+    i{
+      color: $white;
+      font-size: rem-calc(30);
+      margin: rem-calc(5 3);
+    }
+    h6{
+      color: $white;
+      font-family: "HyundaiSansHead-Medium";
+      font-size: rem-calc(11);
+      //letter-spacing: rem-calc(-1);
+      span{
+        color: $azul-cielo;
+        font-family: "HyundaiSansHead-Medium";
+        //font-size: rem-calc(40);
+      }
+      small{
+        color: $white;
+      }
+    }
+    h5{
+      color: $white;
+      font-family: "HyundaiSansHead-Medium";
+    }
+    p{
+      color: $copy;
+      font-size: rem-calc(9);
+      line-height: rem-calc(7);
+    }
+    .callto{
+      @include button-style($azul-cielo, $azul-cielo, $white);
+      font-family: "HyundaiSansHead-Medium";
+    }
+    .menu{
+      a{
+        font-size: rem-calc(7);
+        color: $white;
+        font-family: "HyundaiSansText-Bold";
+        padding: 0;
+        margin: 0;
+        &:after{
+          content: "-";
+          color: $white;
+          //display:inline-block;
+          //vertical-align: middle;
+          margin: rem-calc(0);
+        }
+      }
+      li{
+        margin: rem-calc(0) !important;
+        &:last-child{
+          a{
+            &:after{
+              content: "";
+              //display: block !important;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-menu-01{
+      background-color: $azul;
+      padding: rem-calc(15 0);
+      img{
+        vertical-align: baseline;
+        padding: rem-calc(20 0 0);
+      }
+    }
+    .footer-menu-02{
+      background-color: $azul;
+      margin-bottom: 100%;
+    }
+  }
+  .social-icons{
+    padding-top: rem-calc(20);
+  }
+
+} // end small
+@include breakpoint(medium only) {
+
+  footer{
+    background-color: $azul;
+    .line-border{
+      border-right: 1px $white solid;
+    }
+    i{
+      color: $white;
+      font-size: rem-calc(37);
+      margin: rem-calc(5 3);
+    }
+    h6{
+      color: $white;
+      font-family: "HyundaiSansHead-Medium";
+      font-size: rem-calc(24);
+      display: inline;
+      //letter-spacing: rem-calc(-1);
+      span{
+        color: $azul-cielo;
+        font-family: "HyundaiSansHead-Medium";
+        //font-size: rem-calc(40);
+      }
+      small{
+        color: $white;
+      }
+    }
+    h5{
+      color: $white;
+      font-family: "HyundaiSansHead-Medium";
+    }
+    p{
+      color: $copy;
+      font-size: rem-calc(9);
+      line-height: rem-calc(7);
+    }
+    .callto{
+      @include button-style($azul-cielo, $azul-cielo, $white);
+      font-family: "HyundaiSansHead-Medium";
+    }
+    .menu{
+      a{
+        font-size: rem-calc(9);
+        color: $white;
+        font-family: "HyundaiSansText-Bold";
+        padding: 0;
+        margin: 0;
+        &:after{
+          content: "-";
+          color: $white;
+          //display:inline-block;
+          //vertical-align: middle;
+          margin: rem-calc(0);
+        }
+      }
+      li{
+        margin: rem-calc(0) !important;
+        &:last-child{
+          a{
+            &:after{
+              content: "";
+              //display: block !important;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-menu-01{
+      background-color: $azul;
+      padding: rem-calc(15 0);
+      img{
+        vertical-align: baseline;
+        padding: rem-calc(20 0 0);
+      }
+    }
+    .footer-menu-02{
+      background-color: $azul;
+      margin-bottom: 100%;
+    }
+  }
+  .social-icons{
+    padding-top: rem-calc(10);
+  }
+
+} //end medium
+@include breakpoint(large) {
+
+  footer{
+    background-color: transparent;
+    margin-top: 3%;
+    .line-border{
+      border-right: 2px $white solid;
+    }
+    i{
+      color: $white;
+      font-size: rem-calc(40);
+      margin: 0 6%;
+      line-height: rem-calc(55);
+    }
+    h6{
+      color: $white;
+      font-family: "HyundaiSansHead-Medium";
+      //letter-spacing: rem-calc(-1);
+      font-size: rem-calc(30);
+      padding: rem-calc(8 0 0);
+      line-height: rem-calc(26);
+      span{
+        color: $azul-cielo;
+        font-family: "HyundaiSansHead-Medium";
+        //font-size: rem-calc(40);
+      }
+      small{
+        color: $white;
+      }
+    }
+    h5{
+      color: $white;
+      font-family: "HyundaiSansHead-Medium";
+    }
+    p{
+      color: $white;
+      font-size: rem-calc(10);
+      font-family: "HyundaiSansHead-Regular";
+      margin:0;
+      //padding:rem-calc(10 0);
+    }
+    .callto{
+      @include button-style($azul-cielo, $azul-cielo, $white);
+      font-family: "HyundaiSansHead-Medium";
+    }
+    .menu{
+      a{
+        color: $white;
+        font-size: rem-calc(11);
+        font-family: "HyundaiSansHead-Regular";
+        padding-top: rem-calc(14);
+        padding-bottom: rem-calc(14);
+      }
+    }
+    .footer-menu-01{
+      background-color: $azul;
+      padding: rem-calc(10 0 0);
+      img{
+        vertical-align: baseline;
+        padding: rem-calc(20 0 0);
+      }
+    }
+    .footer-menu-02{
+      background-color: $azul;
+      padding: rem-calc(0);
+      a{
+        padding:0;
+      }
+      .menu{
+        margin-left: rem-calc(16);
+        margin-bottom: 0;
+      }
+      .simple{
+        margin-left: rem-calc(16);
+        margin-bottom: 0;
+        li{
+          vertical-align: middle !important;
+        }
+      }
+    }
+    .social-icons{
+      .column-block{
+        margin-bottom: rem-calc(3);
+      }
+    }
+  }
+
+} // end large

@@ -1,0 +1,167 @@
+.guarantee-bgsection01, .assist-bgsection01, .service-bgsection01, .finance-bgsection01{
+  background-image: url("/assets/hardcode/img/modelos-bg-slideshow.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint(small only) {
+    padding-bottom:rem-calc(60) ;
+    padding-top: rem-calc(90) ;
+  } // end small
+  @include breakpoint(medium only) {
+    padding-top: rem-calc(70);
+  } //end medium
+  @include breakpoint(large) {
+    padding-top: rem-calc(70);
+    padding-bottom: rem-calc(70);
+  } // end large
+
+}
+// garantia
+.guarantee-section {
+  .fp-tableCell {
+    vertical-align: baseline !important;
+  }
+}
+//assist section
+.assist-section {
+  .fp-tableCell {
+    vertical-align: baseline !important;
+  }
+}
+@include breakpoint(small only) {
+  .custom-reveal-assits{
+    border:0 !important;
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+    }
+    p{
+      font-size: rem-calc(12);
+      &:after{
+        content: "";
+        background-color: $azul;
+        width: 10%;
+        height: 3px;
+        margin: 22px auto;
+        display: block;
+      }
+    }
+    h5{
+      color: $black;
+      font-family: "HyundaiSansHead-Medium";
+    }
+
+  }
+}
+
+@include breakpoint(large) {
+  .custom-reveal-assits{
+    border:0 !important;
+    top:rem-calc(224) !important;
+    h2{
+      font-size: rem-calc(48);
+      font-family: "HyundaiSansHead-Medium";
+    }
+    p{
+      &:after{
+        content: "";
+        background-color: $azul;
+        width: 10%;
+        height: 5px;
+        margin: 22px auto;
+        display: block;
+      }
+    }
+    h5{
+      color: $black;
+      font-family: "HyundaiSansHead-Medium";
+      font-size: rem-calc(24);
+    }
+
+  }
+
+}
+
+
+// contacto
+.contacto-bgsection01{
+  background-image: url("/assets/hardcode/img/bg-noticias.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint(small only) {
+    padding-bottom:rem-calc(60) ;
+    padding-top: rem-calc(90) ;
+  } // end small
+  @include breakpoint(medium only) {
+    padding-top: rem-calc(70);
+  } //end medium
+  @include breakpoint(large) {
+    padding-top: rem-calc(70);
+    padding-bottom: rem-calc(70);
+  } // end large
+
+}
+
+.contacto-section {
+  .fp-tableCell {
+    vertical-align: baseline !important;
+  }
+}
+// aviso legal
+.aviso-bgsection01, .mapa-bgsection01, .privacy-bgsection01, .terminos-bgsection01{
+  background-image: url("/assets/hardcode/img/bg-slider-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint(small only) {
+    padding-bottom:rem-calc(60) ;
+    padding-top: rem-calc(90) ;
+  } // end small
+  @include breakpoint(medium only) {
+    padding-top: rem-calc(70);
+  } //end medium
+  @include breakpoint(large) {
+    padding-top: rem-calc(70);
+    padding-bottom: rem-calc(70);
+  } // end large
+
+}
+
+.aviso-section {
+  .fp-tableCell {
+    vertical-align: baseline !important;
+  }
+}
+// mapa
+
+.mapa-section {
+  .fp-tableCell {
+    vertical-align: baseline !important;
+  }
+}
+
+//privacidad
+.privacy-section {
+  .fp-tableCell {
+    vertical-align: baseline !important;
+  }
+}
+// servicio
+.service-section {
+  .fp-tableCell {
+    vertical-align: baseline !important;
+  }
+}
+// terminos
+.terminos-section {
+  .fp-tableCell {
+    vertical-align: baseline !important;
+  }
+}
+
+// finance
+.finance-section {
+  .fp-tableCell {
+    vertical-align: baseline !important;
+  }
+}

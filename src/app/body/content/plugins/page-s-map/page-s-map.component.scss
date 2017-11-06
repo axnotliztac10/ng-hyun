@@ -1,0 +1,198 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+
+@include breakpoint(small only) {
+
+  .mapa-section{
+
+    .mapa-container{
+      background-color: $beige;
+    }
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(10);
+      line-height: rem-calc(18);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    h4{
+      font-family: "HyundaiSansHead-Medium";
+      color: $black;
+    }
+
+    .menu{
+      a{
+        color: $black;
+        font-family: "HyundaiSansHead-Regular";
+        padding-top: rem-calc(4);
+        padding-bottom: rem-calc(4);
+        &:after{
+          display:none;
+        }
+      }
+    }
+
+
+
+
+  } //end mapa section
+
+} // end small
+@include breakpoint(medium only) {
+
+
+  .mapa-section{
+
+    .mapa-container{
+      background-color: $beige;
+    }
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+    h4{
+      font-family: "HyundaiSansHead-Medium";
+      color: $black;
+      font-size: rem-calc(16);
+    }
+
+    .menu{
+      a{
+        color: $black;
+        font-family: "HyundaiSansHead-Regular";
+        font-size: rem-calc(11);
+        &:before{
+          content: '';
+          display: inline-block;
+          width: 7px;
+          height:2px;
+          background-color: $black;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+      }
+    }
+
+
+  } //end mapa section
+
+
+} //end medium
+@include breakpoint(large) {
+
+  .mapa-section{
+
+    .mapa-container{
+      background-color: $beige;
+    }
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      margin-bottom: rem-calc(20);
+      small{
+        color: $white;
+      }
+    }
+    h4{
+      font-family: "HyundaiSansHead-Medium";
+      color: $black;
+    }
+
+    .menu{
+      a{
+        color: $black;
+        font-family: "HyundaiSansHead-Regular";
+        padding-bottom: rem-calc(6);
+        padding-top: rem-calc(6);
+        &:before{
+          content: '';
+          display: inline-block;
+          width: 7px;
+          height:2px;
+          background-color: $black;
+          vertical-align: middle;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .column-block{
+      margin-bottom: 0;
+    }
+
+
+  } //end mapa section
+
+
+
+} // end large
+
+//@include breakpoint(xlarge){
+//
+//  .mapa-section{
+//
+//    .mapa-container{
+//      background-color: $beige;
+//    }
+//
+//    h2{
+//      color: $white;
+//      background-color: $azul;
+//      font-family: "HyundaiSansHead-Medium";
+//      margin: 0;
+//      padding-top: rem-calc(80);
+//      line-height: rem-calc(32);
+//      padding-bottom: rem-calc(10);
+//      small{
+//        color: $white;
+//      }
+//    }
+//    h4{
+//      font-family: "HyundaiSansHead-Medium";
+//      color: $black;
+//    }
+//
+//    .menu{
+//      a{
+//        color: $black;
+//        font-family: "HyundaiSansHead-Regular";
+//        &:before{
+//          content: '';
+//          display: inline-block;
+//          width: 7px;
+//          height:2px;
+//          background-color: $black;
+//          vertical-align: middle;
+//          margin-right: 5px;
+//        }
+//      }
+//    }
+//
+//
+//  } //end mapa section
+//
+//
+//}

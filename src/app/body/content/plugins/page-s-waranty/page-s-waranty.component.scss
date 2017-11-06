@@ -1,0 +1,559 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+
+@include breakpoint(small only) {
+
+  .guarantee-section{
+    background-color: $white;
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(10);
+      line-height: rem-calc(18);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .tabs{
+      border: none;
+    }
+
+    .tabs-title {
+      display: inline-block;
+      float: unset;
+      font-family: "HyundaiSansHead-Regular";
+      background-color: $tab-color-grey;
+      a, a:hover{
+        font-size: rem-calc(12);
+        color: $black;
+        background-color: $tab-color-grey;
+        padding:rem-calc(5 19);
+      }
+    }
+
+    .tabs-title.is-active{
+      background-color: $azul-cielo;
+      a{
+        color: $white;
+        background-color: $azul-cielo;
+      }
+    }
+
+    .tabs-content{
+      background: transparent;
+      border: 0;
+    }
+
+    #garantia{
+      background-color: $white;
+      h6{
+        color: $legal-guarantee;
+        //font-size: rem-calc(16);
+      }
+      h4{
+        color: $gris;
+        font-family: "HyundaiSansHead-Regular";
+        span{
+          color: $azul-cielo;
+          //font-size: rem-calc(27);
+          font-family: "HyundaiSansHead-Medium";
+        }
+        small{
+          color: $legal-guarantee;
+        }
+      }
+    }
+
+    .bg-cobertura{
+      background-image: url("/assets/hardcode/img/llanta_test4.gif");
+      background-repeat: no-repeat;
+      //background-position-y: 100%;
+      background-size: cover;
+      //background-position-x: 13%;
+    }
+
+    #cobertura{
+      height: rem-calc(400);
+      min-height: rem-calc(310);
+      //padding-bottom: 17%;
+      .caption-coverage{
+        //position: absolute;
+        //bottom: 270px;
+        color: $white;
+        h3{
+          font-family: "HyundaiSansHead-Medium";
+          //font-size: rem-calc(42);
+        }
+        a{
+          color: $gris;
+          font-size: rem-calc(10);
+        }
+        h4{
+          color: $white;
+          font-family: "HyundaiSansHead-Medium";
+          font-size: rem-calc(13);
+          span{
+            color: $azul-cielo;
+            //font-size: rem-calc(27);
+            font-family: "HyundaiSansHead-Medium";
+          }
+          small{
+            color: $white;
+          }
+        }
+        h6{
+          &:before{
+            content: '';
+            height: 3px;
+            background-color: $azul-cielo;
+            width: 90px;
+            position: relative;
+            margin: 0 auto;
+            display: block;
+          }
+        }
+      }
+    }
+
+    video{
+      width:190px;
+      //height: 320px;
+    }
+
+
+  } //end guarantee section
+
+  .custom-reveal-guarantee{
+    border:0 !important;
+    h2{
+      //font-size: rem-calc();
+      font-family: "HyundaiSansHead-Medium";
+    }
+  }
+
+
+} // end small
+@include breakpoint(medium only) {
+
+  .guarantee-section{
+    background-color: $white;
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .tabs{
+      border: none;
+    }
+
+    .tabs-title {
+      display: inline-block;
+      float: unset;
+      font-family: "HyundaiSansHead-Regular";
+      background-color: $tab-color-grey;
+      a, a:hover{
+        font-size: rem-calc(22);
+        color: $black;
+        background-color: $tab-color-grey;
+      }
+    }
+
+    .tabs-title.is-active{
+      background-color: $azul-cielo;
+      a{
+        color: $white;
+        background-color: $azul-cielo;
+      }
+    }
+
+    .tabs-content{
+      background: transparent;
+      border:0;
+    }
+
+    #garantia{
+      background-color: $white;
+      h6{
+        color: $legal-guarantee;
+        font-size: rem-calc(16);
+      }
+      h4{
+        color: $gris;
+        font-family: "HyundaiSansHead-Regular";
+        span{
+          color: $azul-cielo;
+          font-size: rem-calc(27);
+          font-family: "HyundaiSansHead-Medium";
+        }
+        small{
+          color: $legal-guarantee;
+        }
+      }
+    }
+
+    .bg-cobertura{
+      background-image: url("/assets/hardcode/img/llanta_test4.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      //background-position-y: 70%;
+    }
+
+    #cobertura{
+      height: rem-calc(660);
+      //padding-bottom: 17%;
+      .caption-coverage{
+        position: absolute;
+        bottom: 270px;
+        color: $white;
+        h3{
+          font-family: "HyundaiSansHead-Medium";
+          font-size: rem-calc(42);
+        }
+        a{
+          color: $gris;
+        }
+        h4{
+          color: $white;
+          font-family: "HyundaiSansHead-Medium";
+          span{
+            color: $azul-cielo;
+            font-size: rem-calc(27);
+            font-family: "HyundaiSansHead-Medium";
+          }
+          small{
+            color: $white;
+          }
+        }
+        h6{
+          &:before{
+            content: '';
+            height: 3px;
+            background-color: $azul-cielo;
+            width: 90px;
+            position: relative;
+            margin: 15px 0;
+            display: block;
+          }
+        }
+      }
+    }
+
+    video{
+      width:100%;
+      height: 550px;
+    }
+
+
+  } //end guarantee section
+
+  .custom-reveal-guarantee{
+    border:0 !important;
+    top:rem-calc(224) !important;
+    h2{
+      //font-size: rem-calc();
+      font-family: "HyundaiSansHead-Medium";
+    }
+  }
+
+} //end medium
+@include breakpoint(large) {
+
+  .guarantee-section{
+    background-color: $white;
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+        font-size: rem-calc(22);
+      }
+    }
+
+    .tabs{
+      border: none;
+      padding:rem-calc(10 0);
+      //background: transparent;
+    }
+
+    .tabs-title {
+      display: inline-block;
+      float: unset;
+      font-family: "HyundaiSansHead-Regular";
+      background-color: $tab-color-grey;
+      a, a:hover{
+        font-size: rem-calc(20);
+        color: $black;
+        background-color: $tab-color-grey;
+        padding: rem-calc(6 30);
+      }
+    }
+
+    .tabs-title.is-active{
+      background-color: $azul-cielo;
+      a{
+        color: $white;
+        background-color: $azul-cielo;
+      }
+    }
+
+    .tabs-content{
+      background: transparent;
+      border:0;
+    }
+
+    #garantia{
+      background-color: $white;
+      h6{
+        color: $legal-guarantee;
+        font-size: rem-calc(12);
+      }
+      h4{
+        color: $gris;
+        line-height:rem-calc(14);
+        font-family: "HyundaiSansHead-Regular";
+        span{
+          color: $azul-cielo;
+          font-size: rem-calc(27);
+          font-family: "HyundaiSansHead-Medium";
+        }
+        small{
+          color: $legal-guarantee;
+        }
+      }
+    }
+
+    .bg-cobertura{
+      background-image: url("/assets/hardcode/img/llanta_test4.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      //background-position-y: 70%;
+    }
+
+    #cobertura{
+      height: rem-calc(440);
+      //padding-bottom: 17%;
+      .caption-coverage{
+        position: absolute;
+        bottom: 230px;
+        //top: 100px;
+        color: $white;
+        h3{
+          font-family: "HyundaiSansHead-Medium";
+          font-size: rem-calc(42);
+          line-height:rem-calc(43);
+        }
+        a{
+          color: $gris;
+        }
+        h4{
+          color: $white;
+          font-family: "HyundaiSansHead-Medium";
+          line-height:rem-calc(0);
+          span{
+            color: $azul-cielo;
+            font-size: rem-calc(27);
+            font-family: "HyundaiSansHead-Medium";
+          }
+          small{
+            color: $white;
+          }
+        }
+        .hasta{
+          h4{
+            &:after{
+              content: '';
+              height: 3px;
+              background-color: $azul-cielo;
+              width: 90px;
+              position: relative;
+              margin: 15px 0;
+              display: block;
+            }
+          }
+
+        }
+
+      }
+    }
+
+    .testvideo{
+      width: 70%;
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+      display: block;
+      margin: auto;
+    }
+
+    video{
+      width: 102%;
+      top: 0;
+      position: absolute;
+      left: -2px;
+    }
+
+  } //end guarantee section
+
+  .custom-reveal-guarantee{
+    border:0 !important;
+    top:rem-calc(224) !important;
+    h2{
+      //font-size: rem-calc();
+      font-family: "HyundaiSansHead-Medium";
+    }
+  }
+
+} // end large
+
+@media  screen and (min-width: 1401px){
+
+  .guarantee-section{
+    background-color: $white;
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .tabs{
+      border: none;
+    }
+
+    .tabs-title {
+      display: inline-block;
+      float: unset;
+      font-family: "HyundaiSansHead-Regular";
+      background-color: $tab-color-grey;
+      a, a:hover{
+        font-size: rem-calc(22);
+        color: $black;
+        background-color: $tab-color-grey;
+      }
+    }
+
+    .tabs-title.is-active{
+      background-color: $azul-cielo;
+      a{
+        color: $white;
+        background-color: $azul-cielo;
+      }
+    }
+
+    .tabs-content{
+      background: transparent;
+      border:0;
+    }
+
+    #garantia{
+      background-color: $white;
+      h6{
+        color: $legal-guarantee;
+        font-size: rem-calc(16);
+      }
+      h4{
+        color: $gris;
+        font-family: "HyundaiSansHead-Regular";
+        span{
+          color: $azul-cielo;
+          font-size: rem-calc(27);
+          font-family: "HyundaiSansHead-Medium";
+        }
+        small{
+          color: $legal-guarantee;
+        }
+      }
+    }
+
+    .bg-cobertura{
+      background-image: url("/assets/hardcode/img/llanta_test4.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+      //background-position-y: 70%;
+    }
+
+    #cobertura{
+      height: rem-calc(860);
+      //padding-bottom: 17%;
+      .caption-coverage{
+        position: absolute;
+        bottom: 270px;
+        color: $white;
+        h3{
+          font-family: "HyundaiSansHead-Medium";
+          font-size: rem-calc(42);
+        }
+        a{
+          color: $gris;
+        }
+        h4{
+          color: $white;
+          font-family: "HyundaiSansHead-Medium";
+          span{
+            color: $azul-cielo;
+            font-size: rem-calc(27);
+            font-family: "HyundaiSansHead-Medium";
+          }
+          small{
+            color: $white;
+          }
+        }
+        h6{
+          &:before{
+            content: '';
+            height: 3px;
+            background-color: $azul-cielo;
+            width: 90px;
+            position: relative;
+            margin: 15px 0;
+            display: block;
+          }
+        }
+      }
+    }
+
+    video{
+      height:400px;
+      width: 800px;
+    }
+
+
+  } //end guarantee section
+
+  .custom-reveal-guarantee{
+    border:0 !important;
+    top:rem-calc(224) !important;
+    h2{
+      //font-size: rem-calc();
+      font-family: "HyundaiSansHead-Medium";
+    }
+  }
+
+}

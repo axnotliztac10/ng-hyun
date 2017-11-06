@@ -1,0 +1,119 @@
+// style dots navigation fullpage
+.nav{
+  position: relative;
+  display: none;
+  z-index: 999;
+  .owl-prev, .owl-next{
+    position: absolute;
+    top: rem-calc(-250);
+    cursor: pointer;
+  }
+  .owl-prev{
+    left: 0;
+  }
+  .owl-next{
+    right: 0;
+  }
+  &:after{
+    clear: both;
+  }
+  @include breakpoint(medium){
+    display: block;
+  }
+}
+// style dots carousel
+.owl-dots{
+  background-color: $beige;
+  .owl-dot{
+    span{
+      background-color: $gris;
+    }
+  }
+  .active{
+    span{
+      background-color: $azul-cielo;
+    }
+  }
+}
+// atributos de home - modelo
+.menu.icon-top > li > div{
+  display: block;
+  line-height: 1;
+  padding: 0.7rem 1rem;
+  text-align: center;
+}
+.menu.icon-top > li > div img{
+  display: block;
+  margin: 0 auto 0.25rem;
+  max-width: 50px;
+  min-width: 28px;
+}
+.menu.icon-top{
+  li{
+    border-right: solid $black 1px;
+    &:last-child{
+      border-right: none;
+    }
+  }
+  span{
+    font-size: rem-calc(9);
+    font-family: "HyundaiSansHead-Regular";
+    @include breakpoint (medium){
+      font-size: rem-calc(12);
+    }
+  }
+}
+// active style home - modelos
+#coches-slider{
+  .center{
+    .item-modelos{
+      /*-webkit-filter: blur(0px);
+              filter: blur(0px);*/
+      -ms-transform: scale(1) !important;
+      -webkit-transform: scale(1) !important;
+      transform: scale(1) !important;
+      h2, p, button, .menu-centered{
+        opacity:1 !important;
+        transition: all .5s ease 0s;
+      }
+      transition: all 1s ease 0s;
+    }
+  }
+}
+
+
+// atributos de modelo
+.nested.icon-top > li > div{
+  display: block;
+  line-height: 1;
+  padding: 0.7rem 1rem;
+  text-align: center;
+}
+.nested.icon-top > li > div img{
+  display: block;
+  margin: 0 auto 0.25rem;
+  max-width: 50px;
+  min-width: 28px;
+}
+.nested.icon-top{
+  li{
+    border-right: none;
+    //border-bottom: solid $black 1px;
+    padding:rem-calc(12);
+    &:after{
+      display: block;
+      width: rem-calc(52);
+      height:rem-calc(2);
+      background-color: $azul;
+      margin:auto;
+      content: "";
+    }
+  }
+  span{
+    font-size: rem-calc(9);
+    font-family: "HyundaiSansHead-Regular";
+    @include breakpoint (medium){
+      font-size: rem-calc(12);
+    }
+  }
+}

@@ -1,0 +1,308 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+@include breakpoint(small only) {
+
+  .contacto-section{
+    background-color: $white;
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(10);
+      line-height: rem-calc(18);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    iframe{
+      width: 100%;
+      height: 273px;
+      overflow: scroll;
+    }
+
+    .contacto-btn{
+      .nav-buttons{
+        a {
+          &:first-child {
+            @include button(false, $azul-cielo, $azul-cielo, $white, solid);
+            font-family: "HyundaiSansHead-Regular";
+            font-size: rem-calc(14);
+          }
+        }
+      }
+    }
+
+    .testdrive-contact{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("/assets/hardcode/img/Contacto.jpg");
+      background-size: cover;
+      padding: rem-calc(266 20 20 0);
+      color: $white;
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+        color: $white;
+      }
+      h5{
+        color: $white;
+        font-family: "HyundaiSansHead-Medium";
+        //letter-spacing: rem-calc(-1);
+        font-size: rem-calc(30);
+        padding: rem-calc(8 0 0);
+        span{
+          color: $azul-cielo;
+          font-family: "HyundaiSansHead-Medium";
+          //font-size: rem-calc(40);
+        }
+        small{
+          color: $white;
+        }
+      }
+      p{
+        color: $white;
+        font-family: "HyundaiSansHead-Regular";
+      }
+      h6{
+        color: $gris;
+      }
+    }
+
+  } //end contacto section
+
+
+} // end small
+@include breakpoint(medium only) {
+
+
+  .contacto-section{
+    background-color: $white;
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    iframe{
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .contacto-btn{
+      .nav-buttons{
+        margin: rem-calc(10);
+        a {
+          &:first-child {
+            @include button(false, $azul-cielo, $azul-cielo, $white, solid);
+            font-family: "HyundaiSansHead-Regular";
+            font-size: rem-calc(14);
+          }
+        }
+      }
+
+    }
+
+    .testdrive-contact{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("/assets/hardcode/img/Contacto.jpg");
+      background-size: cover;
+      padding: rem-calc(70 20 20 0);
+      color: $white;
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+        color: $white;
+      }
+      h5{
+        color: $white;
+        font-family: "HyundaiSansHead-Medium";
+        //letter-spacing: rem-calc(-1);
+        font-size: rem-calc(30);
+        padding: rem-calc(8 0 0);
+        span{
+          color: $azul-cielo;
+          font-family: "HyundaiSansHead-Medium";
+          //font-size: rem-calc(40);
+        }
+        small{
+          color: $white;
+        }
+      }
+      p{
+        color: $white;
+        font-family: "HyundaiSansHead-Regular";
+      }
+      h6{
+        color: $gris;
+      }
+    }
+
+  } //end servici section
+
+
+} //end medium
+@include breakpoint(large) {
+
+  .contacto-section{
+    background-color: $white;
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    iframe{
+      width: 100%;
+      height: 470px;
+      overflow: hidden;
+    }
+
+    .contacto-btn{
+      .nav-buttons{
+        a {
+          &:first-child {
+            @include button(false, $azul-cielo, $azul-cielo, $white, solid);
+            font-family: "HyundaiSansHead-Regular";
+            font-size: rem-calc(14);
+          }
+        }
+      }
+
+    }
+
+    .testdrive-contact{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("/assets/hardcode/img/Contacto.jpg");
+      background-size: cover;
+      padding: rem-calc(207 20 20 0);
+      color: $white;
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+        color: $white;
+      }
+      h5{
+        color: $white;
+        font-family: "HyundaiSansHead-Medium";
+        //letter-spacing: rem-calc(-1);
+        font-size: rem-calc(30);
+        padding: rem-calc(8 0 0);
+        span{
+          color: $azul-cielo;
+          font-family: "HyundaiSansHead-Medium";
+          //font-size: rem-calc(40);
+        }
+        small{
+          color: $white;
+        }
+      }
+      p{
+        color: $white;
+        font-family: "HyundaiSansHead-Regular";
+      }
+      h6{
+        color: $gris;
+      }
+    }
+
+  } //end servici section
+
+} // end large
+
+@include breakpoint(xlarge){
+
+  .contacto-section{
+    background-color: $white;
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    iframe{
+      width: 100%;
+      height: 510px;
+      overflow: hidden;
+    }
+
+    .contacto-btn{
+      .nav-buttons{
+        a {
+          &:first-child {
+            @include button(false, $azul-cielo, $azul-cielo, $white, solid);
+            font-family: "HyundaiSansHead-Regular";
+            font-size: rem-calc(14);
+          }
+        }
+      }
+
+    }
+
+    .testdrive-contact{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("/assets/hardcode/img/Contacto.jpg");
+      background-size: cover;
+      padding: rem-calc(266 20 20 0);
+      color: $white;
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+        color: $white;
+      }
+      h5{
+        color: $white;
+        font-family: "HyundaiSansHead-Medium";
+        //letter-spacing: rem-calc(-1);
+        font-size: rem-calc(30);
+        padding: rem-calc(8 0 0);
+        span{
+          color: $azul-cielo;
+          font-family: "HyundaiSansHead-Medium";
+          //font-size: rem-calc(40);
+        }
+        small{
+          color: $white;
+        }
+      }
+      p{
+        color: $white;
+        font-family: "HyundaiSansHead-Regular";
+      }
+      h6{
+        color: $gris;
+      }
+    }
+
+  } //end contacto section
+
+
+}

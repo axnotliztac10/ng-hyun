@@ -1,0 +1,65 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+.home-bgsection01{
+  background-image: url("/assets/hardcode/img/bg-slider-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include breakpoint(small only) {
+    padding-bottom: rem-calc(70);
+  } // end small
+  @include breakpoint(medium only) {
+    padding-bottom: rem-calc(60);
+  } //end medium
+  @include breakpoint(large) {
+    //padding-bottom: rem-calc(62);
+  } // end large
+}
+
+.home-bgsection02{
+  background-image: url("/assets/hardcode/img/bg-modelos-d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include breakpoint(small only) {
+
+  } // end small
+  @include breakpoint(medium only) {
+
+  } //end medium
+  @include breakpoint(large) {
+    padding-top: rem-calc(90);
+    //padding-top: rem-calc(80);
+  } // end large
+}
+
+.home-bgsection03{
+  background-image: url("/assets/hardcode/img/bg-noticias.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include breakpoint(small only) {
+    padding-top: rem-calc(70);
+    padding-bottom: rem-calc(78);
+  } // end small
+  @include breakpoint(medium only) {
+    padding-top: rem-calc(70);
+  } //end medium
+  @include breakpoint(large) {
+    padding-top: rem-calc(80);
+    padding-bottom: rem-calc(60);
+  } // end large
+}
+
+.footer-bgsection{
+  background-image: url("/assets/hardcode/img/bg-busqueda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include breakpoint(small only) {
+    padding-top: rem-calc(75);
+  } // end small
+  @include breakpoint(medium only) {
+    padding-top: rem-calc(70);
+  } //end medium
+  @include breakpoint(large) {
+    padding-top: rem-calc(26);
+  } // end large
+}

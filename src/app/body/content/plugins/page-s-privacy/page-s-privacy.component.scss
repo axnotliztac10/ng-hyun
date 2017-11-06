@@ -1,0 +1,170 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+
+@include breakpoint(small only) {
+
+  .privacy-section{
+
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(10);
+      line-height: rem-calc(18);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .privacy-text{
+      background-color: $beige;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+      height: 354px;
+      //padding:rem-calc(20);
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+
+      }
+      p, li{
+        font-size: rem-calc(12);
+      }
+    }
+    .txt{
+      -webkit-column-count: 1; /* Chrome, Safari, Opera */
+      -moz-column-count: 1; /* Firefox */
+      column-count: 1;
+    }
+
+
+  } //end privacy section
+
+} // end small
+@include breakpoint(medium only) {
+
+  .privacy-section{
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .privacy-text{
+      background-color: $beige;
+      //padding:rem-calc(20);
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+
+      }
+      p, li{
+        font-size: rem-calc(11);
+      }
+    }
+
+    .txt{
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+    }
+
+
+  } //end privacy section
+
+
+} //end medium
+@include breakpoint(large) {
+
+  .privacy-section{
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .privacy-text{
+      background-color: $beige;
+      //padding:rem-calc(20);
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+        line-height:rem-calc(25);
+
+      }
+      p, li{
+        font-size: rem-calc(11);
+        line-height:rem-calc(15);
+      }
+    }
+
+    .txt{
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+    }
+
+
+  } //end privacy section
+
+
+
+} // end large
+
+@include breakpoint(xlarge){
+
+  .privacy-section{
+
+    h2{
+      color: $white;
+      background-color: $azul;
+      font-family: "HyundaiSansHead-Medium";
+      margin: 0;
+      padding-top: rem-calc(80);
+      line-height: rem-calc(32);
+      padding-bottom: rem-calc(10);
+      small{
+        color: $white;
+      }
+    }
+
+    .privacy-text{
+      background-color: $beige;
+      //padding:rem-calc(20);
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+
+      }
+      p, li{
+        font-size: rem-calc(14);
+        line-height:normal;
+      }
+    }
+
+    .txt{
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+    }
+
+
+  } //end privacy section
+
+}

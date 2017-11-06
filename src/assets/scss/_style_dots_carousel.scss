@@ -1,0 +1,14 @@
+// style dots carousel
+.owl-dots{
+  background-color: $beige;
+  .owl-dot{
+    span{
+      background-color: $gris;
+    }
+  }
+  .active{
+    span{
+      background-color: $azul-cielo;
+    }
+  }
+}

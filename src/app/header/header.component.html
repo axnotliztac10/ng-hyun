@@ -1,0 +1,242 @@
+<header id="header">
+
+  <div class="row expanded" id="menu-principal">
+
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium" >
+
+      <div class="title-bar-title text-center">
+        <a [routerLink]="['/']">
+          <img data-interchange="[assets/hardcode/img/logo-mobile-demo.png, small], [assets/hardcode/img/logo-demo.png, large]" alt="Logo - Hyundai">
+        </a>
+      </div>
+
+      <a class="ham-btn float-right"  data-toggle="main-menu"></a>
+
+      <a class="hide-for-medium float-right servicios-btn" data-toggle="menu-servicios-mobile"></a>
+
+      <a class="hide-for-medium float-right model-btn" data-toggle="modelos-mobile"></a>
+
+      <div class="dropdown-pane hide-for-medium no-padding" id="modelos-mobile" data-dropdown data-auto-focus="true" data-close-on-click="true">
+
+        <ul class="tabs text-center" data-tabs id="submenu-modelos-mobile">
+          <li class="tabs-title is-active"><a href="#panel-mobile" aria-selected="true">Coches</a></li>
+          <li class="tabs-title"><a href="#panel-mobile2">Suv</a></li>
+        </ul>
+
+        <div class="tabs-content" data-tabs-content="submenu-modelos-mobile">
+
+          <div class="tabs-panel is-active" id="panel-mobile">
+            <div class="row">
+              <div class="small-12 column" *ngFor="let p of header.cars">
+                <hyu-products [product]="p"></hyu-products>
+              </div>
+            </div>
+          </div>
+
+          <div class="tabs-panel" id="panel-mobile2">
+            <div class="row">
+              <div class="small-12 column" *ngFor="let p of header.suvs">
+                <hyu-products [product]="p"></hyu-products>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- end drop down mobile modelos-->
+
+      <div class="dropdown-pane hide-for-medium no-padding" id="menu-servicios-mobile" data-dropdown data-auto-focus="true" data-close-on-click="true" data-close-on-click-inside="true">
+
+        <h3 class="text-center">Servicio</h3>
+
+        <div class="row small-up-1">
+          <div class="column column-block no-padding text-center">
+            <a [routerLink]="['/servicio']">
+              <img src="assets/hardcode/img/ico-servicio.png" alt="menu - servicio">
+              <p>Sericio<br>Hyundai</p>
+            </a>
+          </div>
+          <div class="column column-block no-padding text-center">
+            <a [routerLink]="['/garantia']">
+              <img src="assets/hardcode/img/ico-garantia.png" alt="menu - garantia">
+              <p>Garantía</p>
+            </a>
+          </div>
+          <div class="column column-block no-padding text-center">
+            <a [routerLink]="['/asistencia']">
+              <img src="assets/hardcode/img/ico-asistencia.png" alt="menu - Asistencia en el camino">
+              <p>Asistencia<br>en el camino</p>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- end drop down mobile herramientas-->
+
+
+    </div>  <!-- end title bar -->
+
+    <!-- desktop menu-->
+
+    <div class="bg-menu">
+
+      <div class="medium-12 large-11 large-centered columns no-padding">
+
+        <div class="top-bar" id="main-menu">
+          <div class="top-bar-title show-for-medium">
+            <a [routerLink]="['/']">
+              <img data-interchange="[assets/hardcode/img/logo-mobile-demo.png, small], [assets/hardcode/img/logo-demo.png, large]" alt="Logo - Hyundai">
+            </a>
+          </div>
+          <div>
+            <div class="top-bar-left">
+
+              <!-- mobile menu -->
+              <ul class="vertical menu hide-for-medium menu-extras-mobile" data-accordion-menu data-multi-open >
+                <li><a [routerLink]="['/nosotros']">Hyundai</a></li>
+                <li>
+                  <a>Servicio</a>
+                  <ul class="menu vertical nested">
+                    <li><a [routerLink]="['/servicio']">Servicio Hyundai</a></li>
+                    <!--<li><a [routerLink]="['/cadenaservicios']">Cadena de Servicios</a></li>-->
+                    <li><a [routerLink]="['/garantia']">Garantía</a></li>
+                    <li><a [routerLink]="['/asistencia']">Asistencia en el camino</a></li>
+                  </ul>
+                </li>
+                <!--<li><a [routerLink]="['/promociones']">Promociones</a></li>-->
+                <li>
+                  <a>Compra</a>
+                  <ul class="menu vertical nested">
+                    <!--<li><a [routerLink]="['/configurador']">Configurador</a></li>-->
+                    <li><a [routerLink]="['/conoce']">Solicitar Cotización</a></li>
+                    <li><a [routerLink]="['/prueba']">Prueba de Manejo</a></li>
+                    <!--<li><a [routerLink]="['/catalogo']">Catálogo Digital</a></li>-->
+                    <!--<li><a [routerLink]="['/cotizador']">Cotizador</a></li>-->
+                    <li><a [routerLink]="['/distribuidor']">Distribuidores</a></li>
+                    <!--<li><a [routerLink]="['/evaluaciones']">Evaluaciones</a></li>-->
+                  </ul>
+                </li>
+                <li><a [routerLink]="['/financiamiento']">Hyundai Finance</a></li>
+              </ul>
+
+            </div><!-- end top bar left-->
+
+            <div class="top-bar-right show-for-medium">
+              <ul class="menu" id="menu-modelos">
+                <li><a [routerLink]="['/conoce']" [routerLinkActive]="['active']" (click)="menuclose()">Solicitar Cotización</a></li>
+                <li><a [routerLink]="['/prueba']" [routerLinkActive]="['active']" (click)="menuclose()">Prueba de manejo</a></li>
+                <!--<li><a [routerLink]="['/promociones']">Promociones</a></li>-->
+                <li>
+                  <a class="model-btn" data-toggle="modelos-menu" id="test"></a>
+                  <div class="dropdown-pane" id="modelos-menu" data-dropdown data-toggle="true" data-auto-focus="true" data-close-on-click="true">
+                    <ul class="tabs vertical small-1 columns" data-tabs id="modelos-menu-tab">
+                      <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Coches</a></li>
+                      <li class="tabs-title"><a href="#panel2">Suv</a></li>
+                    </ul>
+                    <div class="tabs-content small-10 columns" data-tabs-content="modelos-menu-tab">
+                      <!--Cars-->
+                      <div class="tabs-panel is-active" id="panel1">
+                        <div class="row small-up-5">
+                          <div class="column text-center column-block" *ngFor="let car of header.cars">
+                            <a [routerLink]="[car.path]" (click)="menuclose()">
+                              <img [src]="car.cover" alt="{{car.name}}">
+                              <h5>{{car.name}}</h5>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Suvs-->
+                      <!--Suvs-->
+                      <div class="tabs-panel" id="panel2">
+                        <div class="row small-up-5">
+                          <div class="column text-center column-block" *ngFor="let suv of header.suvs">
+                            <a [routerLink]="[suv.path]" (click)="menuclose()">
+                              <img [src]="suv.cover" alt="{{suv.name}}">
+                              <h5>{{suv.name}}</h5>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="servicios-btn" data-toggle="servicios-menu" id="test" (click)="menuclose()"></a>
+                  <div class="dropdown-pane" id="servicios-menu" data-dropdown data-toggle="true" data-auto-focus="true" data-close-on-click="true">
+                    <div class="row expanded">
+                      <div class="small-11 small-centered columns">
+                        <div class="row small-up-3 float-right">
+                          <div class="column text-center column-block">
+                            <a [routerLink]="['/servicio']" (click)="menuclose()">
+                              <img src="assets/hardcode/img/ico-servicio.png" alt="menu - servicio">
+                              <h5>Sericio<br>Hyundai</h5>
+                            </a>
+                          </div>
+                          <div class="column text-center column-block">
+                            <a [routerLink]="['/garantia']" (click)="menuclose()">
+                              <img src="assets/hardcode/img/ico-garantia.png" alt="menu - garantia">
+                              <h5>Garantía</h5>
+                            </a>
+                          </div>
+                          <div class="column text-center column-block">
+                            <a [routerLink]="['/asistencia']" (click)="menuclose()">
+                              <img src="assets/hardcode/img/ico-asistencia.png" alt="menu - Asistencia en el camino">
+                              <h5>Asistencia en el camino</h5>
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+                <li>
+                  <a class="ham-btn" data-toggle="extras-menu" id="test" (click)="menuclose()"></a>
+                  <div class="dropdown-pane" id="extras-menu" data-dropdown data-toggle="true" data-auto-focus="true" data-close-on-click="true">
+
+                    <div class="row expanded">
+                      <div class="small-12 columns">
+                        <ul class="vertical menu" data-accordion-menu data-multi-open>
+                          <li><a [routerLink]="['/nosotros']" (click)="menuclose()">Hyundai</a></li>
+                          <li>
+                            <a>Servicio</a>
+                            <ul class="menu vertical nested">
+                              <li><a [routerLink]="['/servicio']" (click)="menuclose()">Servicio Hyundai</a></li>
+                              <!--<li><a [routerLink]="['/cadenaservicios']">Cadena de Servicios</a></li>-->
+                              <li><a [routerLink]="['/garantia']" (click)="menuclose()">Garantía</a></li>
+                              <li><a [routerLink]="['/asistencia']" (click)="menuclose()">Asistencia en el camino</a></li>
+                            </ul>
+                          </li>
+                          <!--<li><a [routerLink]="['/promociones']">Promociones</a></li>-->
+                          <li>
+                            <a>Compra</a>
+                            <ul class="menu vertical nested">
+                              <!--<li><a [routerLink]="['/configurador']">Configurador</a></li>-->
+                              <li><a [routerLink]="['/conoce']" (click)="menuclose()">Solicitar Cotización</a></li>
+                              <li><a [routerLink]="['/prueba']" (click)="menuclose()">Prueba de Manejo</a></li>
+                              <!--<li><a [routerLink]="['/catalogo']">Catálogo Digital</a></li>-->
+                              <!--<li><a [routerLink]="['/cotizador']">Cotizador</a></li>-->
+                              <li><a [routerLink]="['/distribuidor']" (click)="menuclose()">Distribuidores</a></li>
+                              <!--<li><a [routerLink]="['/evaluaciones']">Evaluaciones</a></li>-->
+                            </ul>
+                          </li>
+                          <li><a [routerLink]="['/financiamiento']" (click)="menuclose()">Hyundai Finance</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+                </li>
+                <!--<li><input type="search" placeholder="Distribuidor mas cercano"></li>
+                        <li><button type="button" class="button">Buscar</button></li>-->
+              </ul>
+            </div> <!--end top bar right -->
+          </div>
+        </div> <!-- end top bar -->
+
+      </div>
+
+    </div><!--end bg-menu -->
+
+  </div> <!-- end menu principal-->
+
+</header>

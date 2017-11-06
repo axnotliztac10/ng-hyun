@@ -1,0 +1,577 @@
+.owl-dots{
+  background-color: transparent !important;
+  .owl-dot{
+    span{
+      background-color: $gris;
+    }
+  }
+  .active{
+    span{
+      background-color: $azul-cielo !important;
+    }
+  }
+}
+
+//
+//
+// section 360 exterior
+
+
+@include breakpoint(small only) {
+  .bgsection02{
+    .fp-tableCell{
+      vertical-align: middle;
+    }
+  }
+  //360
+  .spritespin{
+    &.spritespin-instance.nopanoramic{
+      width: 100% !important;
+    }
+  }
+  //pano
+  .spritespin{
+    &.spritespin-instance.panoramic{
+      //width: 100% !important;
+      height: 420px !important;
+      .spritespin-stage{
+        //background-size: cover !important;
+        //background-repeat: no-repeat !important;
+      }
+    }
+  }
+}
+@include breakpoint(medium only) {
+  //360
+  .spritespin{
+    &.spritespin-instance.nopanoramic{
+      width: 100% !important;
+    }
+  }
+  //pano
+  .spritespin{
+    &.spritespin-instance.panoramic{
+      //width: 100% !important;
+      height: 890px !important;
+      .spritespin-stage{
+        //background-size: cover !important;
+        //background-repeat: no-repeat !important;
+      }
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .bgsection02{
+    .fp-tableCell{
+      vertical-align: bottom !important;
+    }
+  }
+
+  //360
+  .spritespin{
+    &.spritespin-instance.nopanoramic{
+      width: 100% !important;
+    }
+  }
+  //pano
+  .spritespin{
+    &.spritespin-instance.panoramic{
+      //width: 100% !important;
+      height: 660px !important;
+      .spritespin-stage{
+        //background-size: cover !important;
+        //background-repeat: no-repeat !important;
+      }
+    }
+  }
+
+}
+
+@include breakpoint(xlarge){
+  .bgsection02{
+    .fp-tableCell{
+      vertical-align: middle !important;
+    }
+  }
+}
+
+@media  screen and (min-width: 1401px){
+  //pano
+  .spritespin{
+    &.spritespin-instance.panoramic{
+      //width: 100% !important;
+      height: 900px !important;
+      .spritespin-stage{
+        //background-size: cover !important;
+        //background-repeat: no-repeat !important;
+        background-repeat: repeat-x;
+      }
+    }
+  }
+
+}
+//.spritespin.panoramic {
+//  margin:auto;
+//  //width: 200px !important;
+//  height:300px !important;
+//  //height: 300px !important;
+//  @include breakpoint (medium){
+//    //width: 600px !important;
+//    height: 400px !important;
+//  }
+//  @include breakpoint (large){
+//    //width: 1000px !important;
+//    height: 800px !important;
+//  }
+//}
+
+.bgsection03{
+  .nodisplay-color{
+    display: none;
+  }
+}
+
+
+//
+//
+// section performance
+
+@include breakpoint(small only) {
+  .slide-caption{
+    .performance-btn{
+
+      //@include menu-expand;
+      //@include menu-direction(vertical);
+
+      div{
+        &:first-child{
+          a{
+            @include button(true, rgba($azul, 0.75), rgba($azul, 0.85), $white, solid);
+            font-family: "HyundaiSansHead-Regular";
+            margin: 0;
+            padding: rem-calc(80 10);
+            height:100%;
+            font-size: rem-calc(30);
+            //&:hover{
+            //  color: $white;
+            //}
+          }
+        }
+        &:last-child{
+          a{
+            @include button(true, rgba($azul-cielo, 0.75), rgba($azul-cielo, 0.85), $white, solid);
+            font-family: "HyundaiSansHead-Regular";
+            margin: 0;
+            padding: rem-calc(80 10);
+            font-size: rem-calc(30);
+            //&:hover{
+            //  color: $white;
+            //}
+          }
+        }
+      }
+    }
+  }
+
+  .performance-item{
+    .menu{
+      @include menu-direction(vertical);
+      a{
+        color: $gris;
+        cursor: crosshair;
+        padding:0;
+        span{
+          font-size: rem-calc(12);
+          font-family: "HyundaiSansHead-Medium";
+          small{
+            font-size: rem-calc(11);
+          }
+        }
+        i{
+          width: 30%;
+        }
+      }
+    }
+    li{
+      &:first-child{
+        border-bottom: dashed $gris 1px;
+        padding-top: rem-calc(5);
+      }
+    }
+  }
+
+} // end small
+
+@include breakpoint(medium only) {
+
+  .slide-caption{
+    .performance-btn{
+      margin-top: rem-calc(20);
+      div{
+        &:first-child{
+          a{
+            @include button(true, $azul, $azul, $white, solid);
+            font-family: "HyundaiSansHead-Regular";
+            font-size: rem-calc(19);
+            margin-right: rem-calc(0);
+          }
+        }
+        &:last-child{
+          a{
+            @include button(true, $azul-cielo, $azul-cielo, $white, solid);
+            font-family: "HyundaiSansHead-Regular";
+            font-size: rem-calc(19);
+            margin-right: rem-calc(0);
+            margin-left: rem-calc(20);
+          }
+        }
+      }
+    }
+  }
+
+  .performance-content{
+    p{
+      margin: 0;
+    }
+    .content-text-class{
+      p{
+        margin:0 !important;
+      }
+    }
+  }
+
+} //end medium
+
+@include breakpoint(large) {
+
+  .slide-caption{
+    .performance-btn{
+      margin-top: rem-calc(20);
+      div{
+        &:first-child{
+          a{
+            @include button(false, $azul, $azul, $white, solid);
+            font-family: "HyundaiSansHead-Regular";
+            font-size: rem-calc(20);
+            //margin-right: rem-calc(70);
+            padding:rem-calc(6 30);
+          }
+        }
+        &:last-child{
+          a{
+            @include button(false, $azul-cielo, $azul-cielo, $white, solid);
+            font-family: "HyundaiSansHead-Regular";
+            font-size: rem-calc(20);
+            //margin-right: rem-calc(70);
+            margin-left: rem-calc(20);
+            padding:rem-calc(6 30);
+          }
+        }
+      }
+    }
+  }
+
+  .performance-item{
+    .owl-item {
+      padding:5px;
+      img{
+        height: rem-calc(300);
+        width: auto;
+        margin: auto;
+      }
+    }
+    .center-vertical{
+      padding-top: rem-calc(50);
+    }
+    p{
+      line-height:rem-calc(22);
+    }
+  }
+
+
+  .performance-content{
+    p{
+      margin: 0;
+    }
+    .content-text-class{
+      p{
+        margin:0 !important;
+      }
+    }
+  }
+
+} // end large
+
+// performance - item/slide
+
+.performance-item{
+
+  .menu{
+    a{
+      color: $gris;
+      cursor: crosshair;
+      span{
+        font-size: rem-calc(25);
+        font-family: "HyundaiSansHead-Medium";
+        small{
+          font-size: rem-calc(14);
+        }
+      }
+    }
+  }
+}
+
+.bgsection04{
+  #volUp{
+    display: none !important;
+  }
+}
+
+//
+//
+// section security - models
+
+@include breakpoint(small only) {
+
+  .security-item{
+    .content-text-class{
+      p{
+        font-family: "HyundaiSansHead-Regular";
+        margin: 0;
+        font-size: rem-calc(13);
+        line-height: rem-calc(14);
+      }
+    }
+  }
+
+} // end small
+
+@include breakpoint(medium only) {
+
+  .full-height-security{
+    .small-11:first-child{
+      height:100%;
+      background-color: white;
+    }
+  }
+
+}// end medium
+
+@include breakpoint(large) {
+
+  .security-item{
+    .content-text-class{
+      p{
+        font-family: "HyundaiSansHead-Regular";
+        margin: 0;
+        font-size: rem-calc(12);
+        line-height: rem-calc(17);
+      }
+    }
+  }
+
+} // end small
+
+.bgsection05{
+  //height: auto !important;
+  .fp-tableCell{
+    vertical-align: baseline !important;
+  }
+}
+
+//
+//
+// section version - models
+
+@include breakpoint(small only) {
+
+  .column-li-3{
+    ul{
+      list-style:none !important;
+      li{
+        padding: rem-calc(0);
+        font-size: rem-calc(12);
+        text-align: center;
+        &:nth-child(even) {
+          color: $black;
+        }
+        &:nth-child(odd) {
+          color: $gris;
+        }
+        //&:before{
+        //  width: 7px;
+        //  height: 7px;
+        //  background: $azul-cielo;
+        //  -moz-border-radius: 50%;
+        //  -webkit-border-radius: 50%;
+        //  border-radius: 50%;
+        //  content: "";
+        //  display: inline-block;
+        //  vertical-align: middle;
+        //  margin: 5px;
+        //}
+      }
+    }
+  }
+
+  .owl-version{
+    .owl-carousel, .owl-stage-outer{
+      height: rem-calc(270);
+    }
+  }
+
+  .brochure {
+    background-color: $white;
+    float: none !important;
+    color: $white;
+
+    div {
+      span{
+        display: none;
+      }
+      a {
+        &:nth-child(2) {
+          @include button(false, $azul, $azul, $white, solid);
+          font-family: "HyundaiSansHead-Regular";
+          font-size: rem-calc(14);
+          margin: 0;
+        }
+        &:last-child {
+          @include button(false, $azul-cielo, $azul-cielo, $white, solid);
+          font-family: "HyundaiSansHead-Regular";
+          font-size: rem-calc(14);
+          margin: 0;
+        }
+      }
+    }
+  }
+
+
+} // end small
+@include breakpoint(medium only) {
+
+  .column-li-3{
+    ul{
+      list-style:none !important;
+      li{
+        padding: rem-calc(0);
+        font-size: rem-calc(12);
+        text-align: center;
+        &:nth-child(even) {
+          color: $black;
+        }
+        &:nth-child(odd) {
+          color: $gris;
+        }
+        //&:before{
+        //  width: 7px;
+        //  height: 7px;
+        //  background: $azul-cielo;
+        //  -moz-border-radius: 50%;
+        //  -webkit-border-radius: 50%;
+        //  border-radius: 50%;
+        //  content: "";
+        //  display: inline-block;
+        //  vertical-align: middle;
+        //  margin: 5px;
+        //}
+      }
+    }
+  }
+
+
+  .brochure{
+    line-height: rem-calc(9);
+    padding: rem-calc(5 0);
+    div{
+      padding:0;
+      margin: 0;
+      span{
+        padding: rem-calc(10 0);
+        display: block;
+      }
+      a{
+        color: $azul;
+        font-family: "HyundaiSansHead-Medium";
+      }
+    }
+  }
+
+
+} //end medium
+@include breakpoint(large) {
+  .bgsection06 {
+    .fp-slides {
+      .fp-slidesContainer {
+        .slide {
+          .fp-tableCell {
+            vertical-align: baseline !important;
+          }
+        }
+      }
+    }
+  }
+
+  .version-content{
+    p{
+      font-family: "HyundaiSansHead-Regular";
+      font-size:rem-calc(24) !important;
+    }
+  }
+
+  .column-li-3{
+    ul{
+      list-style:none !important;
+      li{
+        //padding: rem-calc(10 0);
+        font-size: rem-calc(15);
+        text-indent: rem-calc(-17);
+        &:before{
+          width: 7px;
+          height: 7px;
+          background: $azul-cielo;
+          -moz-border-radius: 50%;
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          margin: 5px;
+        }
+      }
+    }
+  }
+
+  .brochure{
+    line-height: rem-calc(9);
+    padding: rem-calc(5 0);
+    div{
+      padding:0;
+      margin: 0;
+      span{
+        padding: rem-calc(10 0);
+        display: block;
+      }
+      a{
+        color: $azul;
+        font-family: "HyundaiSansHead-Medium";
+      }
+    }
+  }
+
+} // end large
+
+//
+//
+// footer section
+@include breakpoint(large){
+  .f-models-version{
+    .fp-tableCell{
+      vertical-align: baseline !important;
+    }
+    #map {
+      height: rem-calc(300) !important;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div *ngFor="let content of section">
+  <div class="small-11 small-centered columns no-padding">
+    <!--<div class="row expanded show-for-small-only">-->
+      <!--<div class="small-12 columns no-padding text-center">-->
+        <!--<h1>{{content.title}}</h1>-->
+      <!--</div>-->
+    <!--</div>-->
+    <div class="row expanded">
+      <!--<div class="title-180 show-for-medium">-->
+        <!--<h1>{{content.title}}</h1>-->
+      <!--</div>-->
+      <hyu-view-360 [colors]="content.colors" [as_panorama]="true"></hyu-view-360>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<hyu-fullpage-slide-plugin *ngFor="let slide of section; let i = index">
+
+  <!--<div class="slide-caption slideshow-home" [style.width]="(100 / section.length) + '%'">-->
+  <!--<h2>{{slide?.title}}</h2>-->
+  <!--<p class="show-for-medium">{{slide?.caption_text}}</p>-->
+  <!--<a [href]="slide?.link_to"  class="button large">{{slide?.link_text}}</a>-->
+  <!--</div>-->
+
+  <div class="slide-img">
+    <img *ngIf="!slide?.landscape_is_video" [src]="slide?.landscape_src" alt="{{slide?.alt_text}}">
+    <hyu-video-player *ngIf="slide?.landscape_is_video" [src]="slide?.landscape_src"></hyu-video-player>
+  </div>
+
+</hyu-fullpage-slide-plugin>
+<div class="small-11 small-centered no-padding columns hide-for-medium">
+  <!-- botones -->
+  <div class="row small-up-3" data-equalizer>
+    <div class="column no-padding bg-white column-block" data-equalizer-watch>
+      <button class="button btn-cotizador no-padding-top no-padding-bottom no-padding-right small" type="button">
+        <div class="text-btn">
+          <div class="imag"><img src="./assets/hardcode/img/ico-cotizador.png" alt="cotizador"></div>
+          <div class="texto">Cotización</div>
+        </div>
+      </button>
+    </div>
+    <div class="column no-padding bg-azul column-block" data-equalizer-watch>
+      <button class="button btn-manejo no-padding-top no-padding-bottom no-padding-right small" type="button">
+        <div class="text-btn">
+          <div class="imag">
+            <img src="./assets/hardcode/img/ico-manejo.png" alt="prueba de manejo">
+          </div>
+          <div class="texto">
+            Prueba de manejo
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="column no-padding bg-azulcielo column-block" data-equalizer-watch>
+      <button class="button btn-promociones no-padding-top no-padding-bottom no-padding-right small" type="button">
+        <div class="text-btn">
+          <div class="imag">
+            <img src="./assets/hardcode/img/ico-promociones.png" alt="promociones">
+          </div>
+          <div class="texto">
+            Promociones
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

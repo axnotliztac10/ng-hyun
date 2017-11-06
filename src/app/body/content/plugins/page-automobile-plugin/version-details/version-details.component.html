@@ -1,0 +1,96 @@
+<!--car link version-->
+<hyu-fullpage-slide-plugin *ngFor="let content of section">
+
+    <div class="bgwhite">
+
+      <div class="version-content">
+        <div class="bgbeige text-center">
+          <div class="row expanded">
+            <div class="small-12 columns">
+              <h1>{{content.title}}</h1>
+            </div>
+            <div class="small-12 columns">
+              <p class="no-margin">{{content.caption_text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row expanded gotoversion">
+        <a *ngFor="let version of content.children; let i = index;" [attr.href]="base + '#buy/' + (i+1)">
+          <div class="small-12 medium-6 large-3 no-padding no-margin columns" >
+            <div class="container-version">
+              <div class="container-text">
+                <h1>{{version.title}} <small>{{version.caption_text}}</small></h1>
+                <h5 [innerHTML]="version.content_text"></h5>
+              </div>
+              <div class="container-img">
+                <img [src]="version.landscape_src">
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+</hyu-fullpage-slide-plugin>
+
+<!-- Details + atributes -->
+<div *ngFor="let content of section">
+  <hyu-fullpage-slide-plugin *ngFor="let version of content.children">
+
+      <div class="fullheight bgbeige">
+
+        <div class="version-content">
+          <div class="bgbeige text-center">
+            <div class="row expanded">
+              <div class="small-12 columns">
+                <h1>{{version.title}} <small>{{version.caption_text}}</small></h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row expanded">
+          <div class="small-12 medium-12 large-3 no-padding no-margin columns show-for-medium" >
+            <div class="container-version">
+              <div class="container-text">
+                <h1>{{version.title}} <small>{{version.caption_text}}</small></h1>
+                <h5 [innerHTML]="version.content_text"></h5>
+              </div>
+              <div class="container-img">
+                <img [src]="version.landscape_src">
+              </div>
+            </div>
+          </div>
+          <div class="small-12 medium-12 large-9 columns no-padding">
+            <div class="row expanded">
+              <div class="small-12 columns no-padding">
+                <a class="back-version close-ico float-right"></a>
+              </div>
+              <div class="small-11 small-centered columns owl-version">
+                <div hyu-owl-plugin [owlresponsive]="owlresponsive" [startFromBegining]="true">
+                  <div class="item" *ngFor="let details of version.children">
+                    <h3>{{details.title}}</h3>
+                    <hr>
+                    <div class="column-li-3" [innerHTML]="details.content_text"></div>
+                    <hr>
+                  </div>
+                </div>
+              </div>
+              <div class="small-8 small-centered columns text-center" >
+                <div class="button-group">
+                  <!--<a class="button">Compara</a>-->
+                  <a class="button" (click)="setLocal(version.caption_text)" [routerLink]="['/conoce' + productPath ]">Solicitar Cotización</a>
+                  <a class="button" (click)="setLocal(version.caption_text)" [routerLink]="['/prueba' + productPath]">Prueba de manejo</a>h
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </hyu-fullpage-slide-plugin>
+</div>

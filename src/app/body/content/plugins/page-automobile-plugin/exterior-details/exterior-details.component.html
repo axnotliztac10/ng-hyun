@@ -1,0 +1,49 @@
+<div *ngFor="let content of section">
+  <!--<div class="small-12 hide select-version columns">-->
+  <!--<label>-->
+  <!--<select>-->
+  <!--<option value="husker">Sonata GLS</option>-->
+  <!--<option value="starbuck">Sonata Premium</option>-->
+  <!--<option value="hotdog">Sonata Limited</option>-->
+  <!--<option value="apollo">Sonata Sport</option>-->
+  <!--</select>-->
+  <!--</label>-->
+  <!--</div>-->
+  <div class="small-11 small-centered columns">
+    <div class="row expanded">
+      <div class="small-12 medium-10 medium-centered large-3 large-uncentered columns">
+        <div class="row container-atributos">
+          <div class="small-12 text-center medium-text-left columns">
+            <h1>{{content.title}}</h1>
+            <h4>{{content.caption_text}}</h4>
+            <p class="show-for-small-only" [innerHTML]="content.content_text"></p>
+            <div class="row">
+              <div class="small-10 columns no-padding">
+                <div class="row show-for-medium medium-up-5 large-up-2 atributos-modelo" data-equalizer data-equalize-by-row="true">
+                  <div class="column column-block text-center" *ngFor="let attr of content.children" data-equalizer-watch>
+                    <img [src]="attr.landscape_src" alt="{{attr.title}}"><p>{{attr.title}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="small-12 large-9 text-center columns">
+        <div class="row">
+          <div class="small-2 medium-1 columns">
+            <button id="prev" *ngIf="this.panorama_src == null"><img src="./assets/hardcode/img/back.png" alt="Izquierda"></button>
+          </div>
+          <div class="small-8 medium-10 columns">
+            <hyu-view-360 [colors]="content.colors"></hyu-view-360>
+          </div>
+          <div class="small-2 medium-1 columns">
+            <button id="next" *ngIf="this.panorama_src == null"><img src="./assets/hardcode/img/next.png" alt="Derecha"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

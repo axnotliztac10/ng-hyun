@@ -1,0 +1,70 @@
+@import "scss/variables";
+
+@import "scss/style_header_fixed";
+
+@import "scss/style_dots_navigation_fullpage";
+@import "scss/style_dots_carousel";
+@import "scss/style_excerpt_page_home";
+@import "scss/style_excerpt_page_model";
+@import "scss/style_excerpt_page_meet";
+@import "scss/style_excerpt_page_testdrive";
+@import "scss/style_excerpt_page_dealers";
+
+// service
+@import "scss/style_excerpt_section_service";
+
+// general styles
+
+
+.no-padding{
+  padding: 0 !important;
+}
+.no-padding-top{
+  padding-top: 0 !important;
+}
+.no-padding-bottom{
+  padding-bottom: 0 !important;
+}
+.no-padding-left{
+  padding-left: 0 !important;
+}
+.no-padding-right{
+  padding-right: 0 !important;
+}
+
+.no-margin{
+  margin: 0 !important;
+}
+.no-margin-top{
+  margin-top: 0 !important;
+}
+.no-margin-bottom{
+  margin-bottom: 0 !important;
+}
+.no-margin-left{
+  margin-left: 0 !important;
+}
+.no-margin-right{
+  margin-right: 0 !important;
+}
+
+// reveal for all
+
+.reveal-overlay{
+  background-color: rgba(10, 10, 10, .1);
+}
+
+// disable slides navigation - fullpage
+.no-slidenavigation{
+  .fp-slidesNav{
+    display:none;
+  }
+}
+// 11. Button
+// ----------
+.button{
+  padding:rem-calc(6 30) !important;
+}
+
+// outline
+*:focus {outline:none !important}

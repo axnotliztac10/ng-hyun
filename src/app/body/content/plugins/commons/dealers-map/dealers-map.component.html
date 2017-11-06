@@ -1,0 +1,76 @@
+<div id="busca-distribuidor">
+  <div class="bg-w" *ngIf="showHeader && showall">
+    <div class="small-11 small-centered columns" >
+      <h2 class="text-center">Distribuidores<br><small>Siempre cerca de ti</small></h2>
+    </div>
+  </div>
+  <div class="bg-w" *ngIf="showHeader && !showall">
+    <div class="small-11 small-centered columns" >
+      <h2 class="text-center">Busca un distribuidor<br><small>Nosotros te indicamos el más cercano</small></h2>
+    </div>
+  </div>
+
+  <div class="small-12 no-padding columns">
+    <div class="container-maps">
+      <div class="row">
+        <div class="small-11 medium-8 large-4 small-centered medium-uncentered columns busqueda">
+          <div class="row">
+            <div class="small-3 medium-2 large-4 columns text-right no-padding-right">
+              <img src="assets/hardcode/img/ico-busqueda.jpg" width="40" alt="busqueda" style="cursor: pointer;"
+                   (click)="Geolocate()"
+                   *ngIf="!geolocating">
+              <span *ngIf="geolocating">
+                <i class="fa fa-spinner fa-spin fa-2x fa-fw" style="font-style: normal"></i>
+              </span>
+            </div>
+            <div class="small-9 medium-10 large-8 columns no-padding-left">
+              <label>
+                <input type="text" id="dealers-search-box" placeholder="Ingresa tu dirección" [(ngModel)]="q">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="direccion"
+             *ngFor="let dealer of dealers; let i = index;">
+          <div class="small-11 small-centered columns" *ngIf="selected === dealer">
+            <h3>{{dealer.name}}</h3>
+            <p>
+              {{dealer.address_text1}}
+              <br>
+              {{dealer.address_text2 +  ' ' + dealer.zip_code }}
+            </p>
+            <p class="show-for-medium"><strong>Horario:</strong> {{dealer.schedule}}</p>
+            <p class="show-for-medium"><strong>Tel(s):</strong> {{dealer.phone1}} &nbsp; {{dealer.phone2}}</p>
+            <div class="row show-for-medium">
+              <div class="small-6 columns">
+                <i class="fi-social-twitter"></i>{{dealer.tw}}
+              </div>
+              <div class="small-6 columns">
+                <i class="fi-social-facebook"></i> {{dealer.fb}}
+              </div>
+              <!--<div class="small-8 small-centered columns text-center">-->
+                <!--<a href="">Lista de distribuidores</a>-->
+              <!--</div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="map">
+        <sebm-google-map [latitude]="lat"
+                         [longitude]="lng"
+                         [fitBounds]="bounds"
+                         [zoom]="zoom"
+                         [disableDefaultUI]="false"
+                         [zoomControl]="true"
+                         [scrollwheel]="false">
+          <sebm-google-map-marker *ngFor="let marker of dealers; let i = index;"
+                                  [latitude]="marker.lat"
+                                  [longitude]="marker.lng"
+                                  [iconUrl]="'./assets/img/locator-image.png'"
+                                  (markerClick)="MarkerClicked(marker)">
+          </sebm-google-map-marker>
+        </sebm-google-map>
+      </div>
+    </div>
+  </div>
+</div>

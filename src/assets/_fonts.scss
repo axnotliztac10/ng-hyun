@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "HyundaiSansHead-Light";
+  src: url("fonts/HyundaiSansHead-Light.eot");
+  src: url("fonts/HyundaiSansHead-Light.eot?#iefix") format("embedded-opentype"),
+  url("fonts/HyundaiSansHead-Light.woff2") format("woff2"),
+  url("fonts/HyundaiSansHead-Light.woff") format("woff"),
+  url("fonts/HyundaiSansHead-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HyundaiSansHead-Regular";
+  src: url("fonts/HyundaiSansHead-Regular.eot");
+  src: url("fonts/HyundaiSansHead-Regular.eot?#iefix") format("embedded-opentype"),
+  url("fonts/HyundaiSansHead-Regular.woff2") format("woff2"),
+  url("fonts/HyundaiSansHead-Regular.woff") format("woff"),
+  url("fonts/HyundaiSansHead-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HyundaiSansHead-Medium";
+  src: url("fonts/HyundaiSansHead-Medium.eot");
+  src: url("fonts/HyundaiSansHead-Medium.eot?#iefix") format("embedded-opentype"),
+  url("fonts/HyundaiSansHead-Medium.woff2") format("woff2"),
+  url("fonts/HyundaiSansHead-Medium.woff") format("woff"),
+  url("fonts/HyundaiSansHead-Medium.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HyundaiSansText-Regular";
+  src: url("fonts/HyundaiSansText-Regular.eot");
+  src: url("fonts/HyundaiSansText-Regular.eot?#iefix") format("embedded-opentype"),
+  url("fonts/HyundaiSansText-Regular.woff2") format("woff2"),
+  url("fonts/HyundaiSansText-Regular.woff") format("woff"),
+  url("fonts/HyundaiSansText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HyundaiSansText-Medium";
+  src: url("fonts/HyundaiSansText-Medium.eot");
+  src: url("fonts/HyundaiSansText-Medium.eot?#iefix") format("embedded-opentype"),
+  url("fonts/HyundaiSansText-Medium.woff2") format("woff2"),
+  url("fonts/HyundaiSansText-Medium.woff") format("woff"),
+  url("fonts/HyundaiSansText-Medium.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HyundaiSansText-MediumItalic";
+  src: url("fonts/HyundaiSansText-MediumItalic.eot");
+  src: url("fonts/HyundaiSansText-MediumItalic.eot?#iefix") format("embedded-opentype"),
+  url("fonts/HyundaiSansText-MediumItalic.woff2") format("woff2"),
+  url("fonts/HyundaiSansText-MediumItalic.woff") format("woff"),
+  url("fonts/HyundaiSansText-MediumItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "HyundaiSansText-Bold";
+  src: url("fonts/HyundaiSansText-Bold.eot");
+  src: url("fonts/HyundaiSansText-Bold.eot?#iefix") format("embedded-opentype"),
+  url("fonts/HyundaiSansText-Bold.woff2") format("woff2"),
+  url("fonts/HyundaiSansText-Bold.woff") format("woff"),
+  url("fonts/HyundaiSansText-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HyundaiSansText-BoldItalic";
+  src: url("fonts/HyundaiSansText-BoldItalic.eot");
+  src: url("fonts/HyundaiSansText-BoldItalic.eot?#iefix") format("embedded-opentype"),
+  url("fonts/HyundaiSansText-BoldItalic.woff2") format("woff2"),
+  url("fonts/HyundaiSansText-BoldItalic.woff") format("woff"),
+  url("fonts/HyundaiSansText-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: "HyundaiSansText-Italic";
+  src: url("fonts/HyundaiSansText-Italic.eot");
+  src: url("fonts/HyundaiSansText-Italic.eot?#iefix") format("embedded-opentype"),
+  url("fonts/HyundaiSansText-Italic.woff2") format("woff2"),
+  url("fonts/HyundaiSansText-Italic.woff") format("woff"),
+  url("fonts/HyundaiSansText-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+html * {
+  font-family: "HyundaiSansText-Regular", Verdana, sans-serif;
+}

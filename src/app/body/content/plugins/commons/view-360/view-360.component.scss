@@ -1,0 +1,156 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+@include breakpoint(small only) {
+  .color-select{
+    margin-bottom: rem-calc(10);
+
+    a{
+      &:hover{
+        h6{
+          &:after{
+            background-color: $gris;
+          }
+        }
+        .color{
+
+          -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+          -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+          box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+        }
+      }
+    }
+
+    h6{
+      font-family: "HyundaiSansHead-Medium";
+      color: $black;
+      font-size: rem-calc(10);
+
+      &:after{
+        display: block;
+        width: 100%;
+        height:4px;
+        background-color: $white;
+        content: "";
+        transition: all 1s ease 0s;
+      }
+    }
+
+    .color{
+      transition: all 1s ease 0s;
+      width: rem-calc(30);
+      height: rem-calc(30);
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+    }
+
+  }
+
+
+} // end small
+@include breakpoint(medium only) {
+
+  .color-select{
+
+    a{
+      text-align: center;
+      &:hover{
+        h6{
+          &:after{
+            background-color: $gris;
+          }
+        }
+        .color{
+
+          -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+          -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+          box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+        }
+      }
+    }
+
+    h6{
+      font-family: "HyundaiSansHead-Medium";
+      color: $black;
+      font-size: rem-calc(10);
+
+      &:after{
+        display: block;
+        width: 100%;
+        height:4px;
+        background-color: $white;
+        content: "";
+        transition: all 1s ease 0s;
+      }
+    }
+
+    .color{
+      margin:auto;
+      transition: all 1s ease 0s;
+      width: rem-calc(40);
+      height: rem-calc(40);
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+    }
+
+  }
+
+} //end medium
+@include breakpoint(large) {
+  .color-select{
+    margin:0;
+    padding:0;
+    //width: 12.5% !important;
+  //width: 65px !important;
+    a{
+      text-align: center;
+      &:hover{
+        h6{
+          &:after{
+            background-color: $gris;
+          }
+        }
+        .color{
+
+          -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+          -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+          box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+        }
+      }
+    }
+
+    h6{
+      font-family: "HyundaiSansHead-Medium";
+      color: $black;
+      font-size: rem-calc(12);
+
+      &:after{
+        display: block;
+        width: 40%;
+        height:4px;
+        background-color: $white;
+        content: "";
+        transition: all 1s ease 0s;
+        margin:auto;
+      }
+    }
+
+    .color{
+      margin:auto;
+      transition: all 1s ease 0s;
+      width: rem-calc(30);
+      height: rem-calc(30);
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.05);
+    }
+    //.column-block{
+    //  padding:0;
+    //}
+
+  }
+
+
+} // end large

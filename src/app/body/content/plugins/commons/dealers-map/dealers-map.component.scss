@@ -1,0 +1,210 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+#dealers-search-box{
+  border: none;
+  box-shadow: none;
+}
+
+.sebm-google-map-container {
+  height: 100%;
+}
+
+@include breakpoint(small only) {
+
+  #busca-distribuidor{
+    //padding-top: rem-calc(60);
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+      font-size: rem-calc(26);
+      line-height: rem-calc(17);
+      padding: rem-calc(20 0);
+      small{
+        font-size: rem-calc(13);
+        color: $black;
+      }
+    }
+
+    .container-maps{
+      position: relative;
+    }
+
+    .bg-w{
+      background-color: $white;
+    }
+
+    #map {
+      height: rem-calc(260);
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .busqueda{
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      padding-top: rem-calc(5);
+    }
+    .direccion{
+      position: absolute;
+      z-index: 2;
+      padding: 0;
+      bottom: 0;
+      background-color: $beige;
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+        margin:0;
+      }
+      p{
+        line-height: rem-calc(16);
+        font-size: rem-calc(11);
+      }
+    }
+  }
+
+} // end small
+@include breakpoint(medium only) {
+
+  #busca-distribuidor{
+    //padding-top: rem-calc(60);
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+      font-size: rem-calc(36);
+      line-height: rem-calc(23);
+      padding: rem-calc(40 0);
+      small{
+        font-size: rem-calc(13);
+        color: $black;
+      }
+    }
+
+    .container-maps{
+      position: relative;
+    }
+
+    .bg-w{
+      background-color: $white;
+    }
+
+    #map {
+      height: rem-calc(690);
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .busqueda{
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      padding-top: rem-calc(5);
+    }
+    .direccion{
+      position: absolute;
+      z-index: 2;
+      padding: 0;
+      bottom: 0;
+      background-color: $beige;
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+        margin:0;
+      }
+      p{
+        line-height: rem-calc(16);
+        font-size: rem-calc(11);
+      }
+      .fi-social-twitter, .fi-social-facebook{
+        font-size: rem-calc(32);
+        vertical-align: middle;
+        color: $azul;
+      }
+      a{
+        @include button(true, $azul, $azul, $white, solid);
+        font-family: "HyundaiSansHead-Regular";
+        font-size: rem-calc(14);
+      }
+    }
+  }
+
+} //end medium
+@include breakpoint(large) {
+
+  #busca-distribuidor{
+    //padding-top: rem-calc(60);
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+      font-size: rem-calc(40);
+      line-height: rem-calc(20);
+      padding: rem-calc(40 0);
+      margin: 0;
+      small{
+        font-size: rem-calc(18);
+        color: $black;
+        font-family: "HyundaiSansHead-Regular";
+      }
+    }
+
+    .container-maps{
+      position: relative;
+    }
+
+    .bg-w{
+      background-color: $white;
+    }
+
+    #map {
+      height: rem-calc(335);
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .busqueda{
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      padding-top: rem-calc(20);
+      right: 0;
+    }
+    .direccion{
+      position: absolute;
+      z-index: 2;
+      padding: rem-calc(20 10);
+      background-color: $beige;
+      top: 0;
+      left: rem-calc(25);
+
+      h3{
+        font-family: "HyundaiSansHead-Medium";
+        line-height: rem-calc(25);
+      }
+      p{
+        line-height: rem-calc(16);
+        font-size: rem-calc(13);
+      }
+      .fi-social-twitter, .fi-social-facebook{
+        font-size: rem-calc(32);
+        vertical-align: middle;
+        color: $azul;
+      }
+      a{
+        @include button(true, $azul, $azul, $white, solid);
+        font-family: "HyundaiSansHead-Regular";
+        font-size: rem-calc(14);
+      }
+    }
+  }
+
+} // end large

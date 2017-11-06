@@ -1,0 +1,69 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+.bgsection01{
+  background-image: url("/assets/hardcode/img/modelos-bg-slideshow.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100% !important;
+
+  @include breakpoint(small only) {
+    padding-bottom:rem-calc(0) ;
+    padding-top: rem-calc(80) ;
+  } // end small
+  @include breakpoint(medium only) {
+    padding-top: rem-calc(70);
+  } //end medium
+  @include breakpoint(large) {
+    padding-top: rem-calc(80);
+    padding-bottom: rem-calc(0);
+  } // end large
+}
+
+@include breakpoint(small only) {
+
+  h2{
+    color: $white;
+    background-color: $azul;
+    font-family: "HyundaiSansHead-Medium";
+    margin: 0;
+    padding-top: rem-calc(13);
+    line-height: rem-calc(16);
+    padding-bottom: rem-calc(10);
+  }
+
+} // end small
+@include breakpoint(medium only) {
+  h2{
+    color: $white;
+    background-color: $azul;
+    font-family: "HyundaiSansHead-Medium";
+    margin: 0;
+    padding-top: rem-calc(80);
+    line-height: rem-calc(32);
+    padding-bottom: rem-calc(10);
+    small{
+      color: $white;
+    }
+  }
+
+} //end medium
+@include breakpoint(large) {
+
+  h2{
+    color: $white;
+    background-color: $azul;
+    font-family: "HyundaiSansHead-Medium";
+    margin: 0;
+    padding-top: rem-calc(80);
+    line-height: rem-calc(32);
+    padding-bottom: rem-calc(10);
+    small{
+      color: $white;
+      font-size: rem-calc(22);
+    }
+  }
+
+} // end large
+
+

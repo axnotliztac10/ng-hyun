@@ -1,0 +1,308 @@
+@import "./node_modules/foundation-sites/assets/foundation";
+@import "./src/assets/general_styling";
+
+@include breakpoint(small only) {
+
+  .bg-w{
+    background-color: $white;
+    padding: 0;
+  }
+
+  .small-11{
+    //margin-top: rem-calc(-120);
+    //margin-bottom: rem-calc(-90);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    //margin-top: 7%;
+    //.row{
+    //position: absolute;
+    //bottom:0;
+    //margin-top: 18%;
+    //}
+    h1{
+      margin: 0;
+      padding: rem-calc(10 0 0 0);
+      font-family: "HyundaiSansHead-Medium";
+      font-size: rem-calc(30);
+    }
+    h3{
+      line-height: rem-calc(20);
+      padding: rem-calc(0);
+      font-size: rem-calc(15);
+    }
+  }
+  .news-item{
+    position: relative;
+    z-index: 1;
+    //margin-bottom: rem-calc(-90);
+    margin-top: 12%;
+  }
+
+  .bgslide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: block;
+    //left: 0;
+    z-index: 0;
+    margin-left: -3%;
+  }
+
+  .bg-descripcion{
+    background-color: $beige;
+    padding-bottom: rem-calc(30);
+    padding-top: rem-calc(36);
+    text-align: justify;
+    p{
+      line-height: rem-calc(16);
+    }
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+      font-size: rem-calc(24);
+    }
+
+    a{
+      @include button-style($azul, $azul, $white);
+      font-family: "HyundaiSansText-Bold";
+      float: inherit;
+      padding-top: rem-calc(10);
+      padding-bottom: rem-calc(10);
+      padding-left: rem-calc(30);
+      padding-right: rem-calc(30);
+    }
+    h6{
+      padding: rem-calc(20);
+    }
+  }
+
+  .row{
+    background-color: $beige;
+  }
+  img{
+    width: 100% !important;
+    max-width: unset;
+  }
+
+} // end small
+@include breakpoint(medium only) {
+
+  .bg-w{
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .small-11{
+    //margin-top: rem-calc(-120);
+    //margin-bottom: rem-calc(-90);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    //margin-top: 7%;
+    //.row{
+    //position: absolute;
+    //bottom:0;
+    //margin-top: 18%;
+    //}
+    h1{
+      margin: 0;
+      font-family: "HyundaiSansHead-Medium";
+      background-color: $azul;
+      color: $white;
+      font-size: rem-calc(40);
+      padding: rem-calc(20 0 0);
+    }
+    h3{
+      line-height: rem-calc(20);
+      background-color: $azul;
+      color: $white;
+      font-size: rem-calc(24);
+      padding: rem-calc(0 0 20 0);
+      margin-bottom: 0;
+    }
+  }
+  .news-item{
+    position: relative;
+    z-index: 1;
+    //margin-bottom: rem-calc(-90);
+  }
+
+  .bgslide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    //left: 0;
+    z-index: 0;
+    background-image: none !important;
+    display: none;
+
+  }
+
+  .bg-descripcion{
+    background-color: $beige;
+    padding-bottom: rem-calc(18);
+    padding-top: rem-calc(10);
+    text-align: justify;
+    p{
+      line-height: rem-calc(16);
+      padding: rem-calc(0 20);
+    }
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+      font-size: rem-calc(43);
+      line-height: rem-calc(40);
+      padding: rem-calc(20);
+    }
+
+    a{
+      @include button-style($azul, $azul, $white);
+      font-family: "HyundaiSansText-Bold";
+      margin: auto;
+      margin-right: rem-calc(20);
+      text-align: right;
+      padding-top: rem-calc(10);
+      padding-bottom: rem-calc(10);
+      padding-left: rem-calc(30);
+      padding-right: rem-calc(30);
+      float: right;
+    }
+    h6{
+      padding: rem-calc(20);
+      font-size: rem-calc(12);
+      font-family: "HyundaiSansHead-Regular";
+    }
+  }
+  .row{
+    background-color: $beige;
+  }
+  img{
+    width: 100% !important;
+    max-width: unset;
+  }
+
+} //end medium
+@include breakpoint(large) {
+
+
+  .bg-w{
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .small-11{
+    //margin-top: rem-calc(-120);
+    //margin-bottom: rem-calc(-90);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    //margin-top: 7%;
+    //.row{
+    //position: absolute;
+    //bottom:0;
+    //margin-top: 18%;
+    //}
+    h1{
+      margin: 0;
+      font-family: "HyundaiSansHead-Medium";
+      background-color: $azul;
+      color: $white;
+      font-size: rem-calc(40);
+      padding: rem-calc(20 0 0);
+    }
+    h3{
+      line-height: rem-calc(20);
+      background-color: $azul;
+      color: $white;
+      font-size: rem-calc(24);
+      padding: rem-calc(0 0 20 0);
+      margin-bottom: 0;
+    }
+  }
+  .news-item{
+    position: relative;
+    z-index: 1;
+    //margin-bottom: rem-calc(-90);
+  }
+
+  .bgslide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    //left: 0;
+    z-index: 0;
+    background-image: none !important;
+    display: none;
+
+  }
+
+  .bg-descripcion{
+    background-color: $beige;
+    padding-bottom: rem-calc(30);
+    padding-top: rem-calc(30);
+    text-align: justify;
+    p{
+      line-height: rem-calc(16);
+      padding: rem-calc(0 20);
+      font-size: rem-calc(14);
+    }
+    h2{
+      font-family: "HyundaiSansHead-Medium";
+      font-size: rem-calc(43);
+      line-height: rem-calc(40);
+      padding: rem-calc(0 20);
+    }
+
+    a{
+      @include button-style($azul, $azul, $white);
+      font-family: "HyundaiSansText-Bold";
+      margin: auto;
+      margin-right: rem-calc(20);
+      text-align: right;
+      padding-top: rem-calc(6);
+      padding-bottom: rem-calc(6);
+      padding-left: rem-calc(30);
+      padding-right: rem-calc(30);
+      float: right;
+    }
+    h6{
+      padding: rem-calc(0 20);
+      font-size: rem-calc(12);
+      font-family: "HyundaiSansHead-Regular";
+    }
+  }
+  .row{
+    background-color: $beige;
+  }
+  img{
+    width: 100% !important;
+    max-width: unset;
+  }
+
+} // end large
